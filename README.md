@@ -56,7 +56,6 @@ Descrição do cenário onde o sistema deverá funcionar:
 26. A pet shop tem serviços para auxiliar os donos de animais com sobrepeso.
 
 
-
 # 3. Visão geral do sistema
 
 Descrição do sistema e suas relações 
