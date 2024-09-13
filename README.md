@@ -49,11 +49,14 @@ Descrição do cenário onde o sistema deverá funcionar:
 19. Dependendo da situação do animal este receberá uma receita.
 20. O pet shop oferece serviços de banho e tosa.
 21. A pet shop realiza cirurgias, injeções e curativos.
-22. O cliente pode escolher se quer o serviço de pintura de cachorro 
+22. O cliente pode escolher se quer o serviço de pintura de cachorro.
 23. São oferecidos serviços de fisioterapia e nutrição
 24. O sistema deve permitir que o cliente possa visualizar seus animais e suas fichas.
 25. O sistema deve permitir que o cliente possa visualizar suas receitas.
 26. A pet shop tem serviços para auxiliar os donos de animais com sobrepeso.
+27. A pet shop deve oferecer aos clientes um lugar para ter acesso ao receituario dos animais.
+28. A pet shop deve oferecer um meio de comunicação direta com os profissionais para que os donos possão sanar eventuais dúvidas.
+29. 
 
 
 # 3. Visão geral do sistema
