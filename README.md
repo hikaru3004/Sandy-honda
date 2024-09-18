@@ -2,7 +2,7 @@
 
 - [SandyHonda](#sandyhonda)
 - [1. Introdução](#1-introdução)
-- [2. Problema e descrição de negócio](#2-problema-e-descrição-de-negócio)
+- [2. Descrição do negócio](#2-descrição-do-negócio)
 - [3. Visão geral do sistema](#3-visão-geral-do-sistema)
 - [4. Diagrama ER](#4-diagrama-er)
 - [5. Diagrama de classes](#5-diagrama-de-classes)
@@ -20,9 +20,9 @@
 
 # 1. Introdução
 
-O projeto a seguir apresenta um sistema desenvolvido para um petshop. A empredsa é condsiderada micro e iniciou suas atividades recentemente. Ao possuir serviços exclusivos, os sistemas presentes no mercado não se enquadra, desta forma, os proprietários decidiram desenvolver uma solução. Esta solução é detalhada a seguir:
+O projeto a seguir apresenta um sistema desenvolvido para um petshop. A empresa é condsiderada micro e iniciou suas atividades recentemente. Ao possuir serviços exclusivos, os sistemas presentes no mercado não se enquadra, desta forma, os proprietários decidiram desenvolver uma solução. Esta solução é detalhada a seguir:
 
-# 2. Problema e descrição de negócio
+# 2. Descrição do negócio
 
 Descrição do cenário onde o sistema deverá funcionar:
 
@@ -60,6 +60,89 @@ Descrição do cenário onde o sistema deverá funcionar:
 Descrição do sistema e suas relações.
 
 # 4. Diagrama ER
+
+```mermaid
+erDiagram
+    CLIENTE {
+        int id_cliente PK
+        string nome
+        string telefone
+        string endereco
+    }
+    ANIMAL {
+        int id_animal PK
+        string nome
+        string rfid
+        string especie
+        string condicoes_chegada
+        string tipo_racao
+        string habitos
+    }
+
+    VETERINARIO {
+        int id_veterinario PK
+        string nome
+        string especialidade
+    }
+
+    ATENDENTE {
+        int id_atendente PK
+        string nome
+    }
+
+    AGENDA {
+        int id_agenda PK
+        date data
+        time horario
+        string status
+    }
+
+    FICHA {
+        int id_ficha PK
+        string observacoes
+    }
+
+    PRONTUARIO {
+        int id_prontuario PK
+        string detalhes
+        string receita
+    }
+
+    SERVICO {
+        int id_servico PK
+        string tipo
+        string descricao
+        float preco
+    }
+
+    COMUNICACAO {
+        int id_comunicacao PK
+        string mensagem
+        date data_envio
+        date data_resposta
+    }
+
+    HOTEL {
+        int id_hotel PK
+        date checkin
+        date checkout
+        string detalhes
+    }
+
+    CLIENTE ||--o{ ANIMAL : "possui"
+    ANIMAL ||--o{ VETERINARIO : "é atendido por"
+    ANIMAL ||--o{ FICHA : "tem"
+    FICHA ||--|| PRONTUARIO : "tem"
+    VETERINARIO ||--o{ AGENDA : "disponível em"
+    CLIENTE ||--o{ AGENDA : "marca"
+    ANIMAL ||--o{ SERVICO : "recebe"
+    CLIENTE ||--o{ COMUNICACAO : "tem"
+    CLIENTE ||--o{ HOTEL : "marca"
+    ANIMAL ||--o{ HOTEL : "fica hospedado em"
+    ATENDENTE ||--o{ AGENDA : "verifica"
+```
+
+
 
 # 5. Diagrama de classes
 
