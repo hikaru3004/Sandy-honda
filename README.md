@@ -5,6 +5,7 @@
 - [2. Descrição do negócio](#2-descrição-do-negócio)
 - [3. Visão geral do sistema](#3-visão-geral-do-sistema)
 - [4. Diagrama ER](#4-diagrama-er)
+  - [4.1.  Descrição Entidade e Relacionamento](#41--descrição-entidade-e-relacionamento)
 - [5. Diagrama de classes](#5-diagrama-de-classes)
 - [6. casos de uso](#6-casos-de-uso)
 - [7. Diagrama de compenentes](#7-diagrama-de-compenentes)
@@ -17,6 +18,8 @@
 - [14. Manutenção e instalação](#14-manutenção-e-instalação)
 - [15. Glossário](#15-glossário)
 - [16. Script SQL](#16-script-sql)
+  - [16.1 Comando create table:](#161-comando-create-table)
+  - [16.2 Comandos para inserção de dados ficticios:](#162-comandos-para-inserção-de-dados-ficticios)
 
 # 1. Introdução
 
@@ -61,7 +64,7 @@ Descrição do cenário onde o sistema deverá funcionar:
 Descrição do sistema e suas relações.
 
 # 4. Diagrama ER
-* 4.1.  Descrição Entidade e Relacionamento
+## 4.1.  Descrição Entidade e Relacionamento
 
 
 ```mermaid
@@ -274,7 +277,7 @@ classDiagram
 
 # 16. Script SQL
 
-* 16.1 Comando create table:
+## 16.1 Comando create table:
 ```SQL
 -- Tabela para Clientes
 CREATE TABLE Cliente (
@@ -380,7 +383,7 @@ CREATE TABLE Veterinario_Atendimento (
     FOREIGN KEY (id_veterinario) REFERENCES Veterinario(id_veterinario)
 );
 ```
-* 16.2 Comandos para inserção de dados ficticios:
+## 16.2 Comandos para inserção de dados ficticios:
 ```SQL
 -- Inserindo Clientes
 INSERT INTO Cliente (nome, telefone, endereco) VALUES 
