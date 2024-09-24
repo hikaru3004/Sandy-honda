@@ -8,6 +8,7 @@
   - [4.1.  Descrição Entidade e Relacionamento](#41--descrição-entidade-e-relacionamento)
 - [5. Diagrama de classes](#5-diagrama-de-classes)
 - [6. casos de uso](#6-casos-de-uso)
+  - [6.1 Casos de uso](#61-casos-de-uso)
 - [7. Diagrama de compenentes](#7-diagrama-de-compenentes)
 - [8. Diagrama de implantação](#8-diagrama-de-implantação)
 - [9. Protótipo de telas](#9-protótipo-de-telas)
@@ -256,6 +257,11 @@ classDiagram
 ```
 
 # 6. casos de uso 
+
+## 6.1 Casos de uso
+
+![alt text](Diagrama_casos_de_uso.png)
+
 
 # 7. Diagrama de compenentes
 
