@@ -9,6 +9,36 @@
 - [5. Diagrama de classes](#5-diagrama-de-classes)
 - [6. casos de uso](#6-casos-de-uso)
   - [6.1 Casos de uso](#61-casos-de-uso)
+  - [6.2 Histórias de usuario](#62-histórias-de-usuario)
+  - [1. Marcar Animais com RFID](#1-marcar-animais-com-rfid)
+  - [2. Atender Apenas Gatos e Cachorros](#2-atender-apenas-gatos-e-cachorros)
+  - [3. Cadastro de Clientes e Animais](#3-cadastro-de-clientes-e-animais)
+  - [4. Informar Condições do Animal](#4-informar-condições-do-animal)
+  - [5. Informar Tipo de Ração](#5-informar-tipo-de-ração)
+  - [6. Informar Hábitos do Animal](#6-informar-hábitos-do-animal)
+  - [7. Atendimentos com Mais de Um Veterinário](#7-atendimentos-com-mais-de-um-veterinário)
+  - [8. Agenda do Dia para Atendimentos](#8-agenda-do-dia-para-atendimentos)
+  - [9. Ficha e Prontuário para Cada Animal](#9-ficha-e-prontuário-para-cada-animal)
+  - [10. Marcar Horários Futuramente](#10-marcar-horários-futuramente)
+  - [11. Atendimento Gera Receita](#11-atendimento-gera-receita)
+  - [12. Atendimento Inicial pelo Atendente](#12-atendimento-inicial-pelo-atendente)
+  - [13. Verificar Agenda de Veterinários](#13-verificar-agenda-de-veterinários)
+  - [14. Colocar na Fila de Espera](#14-colocar-na-fila-de-espera)
+  - [15. Levar Cliente ao Veterinário](#15-levar-cliente-ao-veterinário)
+  - [16. Realizar Entrevista com o Dono](#16-realizar-entrevista-com-o-dono)
+  - [17. Registro do Resultado da Entrevista](#17-registro-do-resultado-da-entrevista)
+  - [18. Anotar Observações no Prontuário](#18-anotar-observações-no-prontuário)
+  - [19. Receitar Medicamentos](#19-receitar-medicamentos)
+  - [20. Serviços de Banho e Tosa](#20-serviços-de-banho-e-tosa)
+  - [21. Realização de Cirurgias, Injeções e Curativos](#21-realização-de-cirurgias-injeções-e-curativos)
+  - [22. Serviço de Pintura de Cachorro](#22-serviço-de-pintura-de-cachorro)
+  - [23. Serviços de Fisioterapia e Nutrição](#23-serviços-de-fisioterapia-e-nutrição)
+  - [24. Visualizar Animais e Fichas](#24-visualizar-animais-e-fichas)
+  - [25. Visualizar Receitas](#25-visualizar-receitas)
+  - [26. Auxílio para Animais com Sobrepeso](#26-auxílio-para-animais-com-sobrepeso)
+  - [27. Acesso ao Receituário dos Animais](#27-acesso-ao-receituário-dos-animais)
+  - [28. Comunicação Direta com Profissionais](#28-comunicação-direta-com-profissionais)
+  - [29. Serviço de Hotel para Animais](#29-serviço-de-hotel-para-animais)
 - [7. Diagrama de compenentes](#7-diagrama-de-compenentes)
 - [8. Diagrama de implantação](#8-diagrama-de-implantação)
 - [9. Protótipo de telas](#9-protótipo-de-telas)
@@ -260,7 +290,155 @@ classDiagram
 
 ## 6.1 Casos de uso
 
-![alt text](Diagrama_casos_de_uso.png)
+![Casos de uso](https://raw.githubusercontent.com/hikaru3004/SandyHonda/refs/heads/main/Diagrama_casos_de_uso.png?token=GHSAT0AAAAAACXDDCPJXTXZVPIQBEIH7J4IZXTLW6A)
+
+## 6.2 Histórias de usuario
+
+## 1. Marcar Animais com RFID
+**Como um** veterinário  
+**Eu quero** marcar os animais com um código RFID  
+**Para que** eu possa identificá-los rapidamente no sistema e garantir o controle sobre seu histórico.
+
+## 2. Atender Apenas Gatos e Cachorros
+**Como uma** clínica veterinária  
+**Eu quero** limitar o atendimento a gatos e cachorros  
+**Para que** possamos focar nosso atendimento especializado nessas espécies.
+
+## 3. Cadastro de Clientes e Animais
+**Como um** cliente  
+**Eu quero** fazer um cadastro no sistema para mim e para meus animais  
+**Para que** eu possa ter meus dados e os dados dos meus animais registrados no sistema.
+
+## 4. Informar Condições do Animal
+**Como um** cliente  
+**Eu quero** informar as condições nas quais meu animal chegou à clínica  
+**Para que** os veterinários possam ter essa informação no atendimento.
+
+## 5. Informar Tipo de Ração
+**Como um** cliente  
+**Eu quero** informar o tipo de ração que meu animal consome  
+**Para que** o veterinário possa ajustar o tratamento ou fazer recomendações adequadas.
+
+## 6. Informar Hábitos do Animal
+**Como um** cliente  
+**Eu quero** informar os hábitos do meu animal  
+**Para que** o veterinário tenha mais informações para realizar o diagnóstico.
+
+## 7. Atendimentos com Mais de Um Veterinário
+**Como um** sistema  
+**Eu quero** permitir que mais de um veterinário atenda o mesmo animal  
+**Para que** seja possível realizar atendimentos colaborativos e mais completos.
+
+## 8. Agenda do Dia para Atendimentos
+**Como um** cliente  
+**Eu quero** que meu animal seja atendido de acordo com uma agenda do dia  
+**Para que** eu possa planejar melhor meu tempo e o atendimento do meu animal.
+
+## 9. Ficha e Prontuário para Cada Animal
+**Como um** veterinário  
+**Eu quero** criar uma ficha e um prontuário para cada animal atendido  
+**Para que** eu possa registrar o histórico médico e o tratamento do animal.
+
+## 10. Marcar Horários Futuramente
+**Como um** cliente  
+**Eu quero** poder agendar atendimentos futuros para meu animal  
+**Para que** eu possa garantir um horário conveniente para o tratamento.
+
+## 11. Atendimento Gera Receita
+**Como um** veterinário  
+**Eu quero** gerar uma receita médica ao finalizar o atendimento  
+**Para que** o cliente saiba qual medicação ou tratamento seu animal precisa seguir.
+
+## 12. Atendimento Inicial pelo Atendente
+**Como um** cliente  
+**Eu quero** ser atendido inicialmente por um atendente ao chegar à clínica  
+**Para que** meu caso seja direcionado adequadamente.
+
+## 13. Verificar Agenda de Veterinários
+**Como um** atendente  
+**Eu quero** verificar se há veterinários disponíveis na agenda  
+**Para que** eu possa confirmar se o atendimento pode ser realizado.
+
+## 14. Colocar na Fila de Espera
+**Como um** atendente  
+**Eu quero** colocar o cliente e seu animal na fila de espera  
+**Para que** eles aguardem caso não haja veterinário disponível no momento.
+
+## 15. Levar Cliente ao Veterinário
+**Como um** atendente  
+**Eu quero** encaminhar o cliente e seu animal ao veterinário  
+**Para que** o atendimento possa ser realizado após o cadastro.
+
+## 16. Realizar Entrevista com o Dono
+**Como um** veterinário  
+**Eu quero** realizar uma entrevista com o dono do animal  
+**Para que** eu possa coletar todas as informações necessárias para o atendimento.
+
+## 17. Registro do Resultado da Entrevista
+**Como um** veterinário  
+**Eu quero** registrar o resultado da entrevista com o dono em um formulário  
+**Para que** essas informações estejam disponíveis no prontuário.
+
+## 18. Anotar Observações no Prontuário
+**Como um** veterinário  
+**Eu quero** anotar minhas observações no prontuário do animal  
+**Para que** o histórico de saúde do animal esteja sempre atualizado.
+
+## 19. Receitar Medicamentos
+**Como um** veterinário  
+**Eu quero** prescrever uma receita médica para o animal  
+**Para que** o dono saiba qual tratamento seguir.
+
+## 20. Serviços de Banho e Tosa
+**Como um** cliente  
+**Eu quero** utilizar os serviços de banho e tosa oferecidos pela clínica  
+**Para que** meu animal esteja sempre bem cuidado.
+
+## 21. Realização de Cirurgias, Injeções e Curativos
+**Como um** veterinário  
+**Eu quero** realizar cirurgias, injeções e curativos  
+**Para que** o animal receba o tratamento necessário.
+
+## 22. Serviço de Pintura de Cachorro
+**Como um** cliente  
+**Eu quero** escolher o serviço de pintura de cachorro  
+**Para que** meu animal possa receber um tratamento estético diferenciado.
+
+## 23. Serviços de Fisioterapia e Nutrição
+**Como um** cliente  
+**Eu quero** utilizar os serviços de fisioterapia e nutrição oferecidos pela clínica  
+**Para que** meu animal tenha uma melhor qualidade de vida.
+
+## 24. Visualizar Animais e Fichas
+**Como um** cliente  
+**Eu quero** visualizar meus animais e suas fichas de atendimento  
+**Para que** eu possa acompanhar o histórico médico de cada um deles.
+
+## 25. Visualizar Receitas
+**Como um** cliente  
+**Eu quero** visualizar as receitas médicas dos meus animais  
+**Para que** eu saiba quais medicamentos seguir.
+
+## 26. Auxílio para Animais com Sobrepeso
+**Como um** cliente  
+**Eu quero** utilizar os serviços oferecidos para animais com sobrepeso  
+**Para que** meu animal receba o suporte necessário para sua saúde.
+
+## 27. Acesso ao Receituário dos Animais
+**Como um** cliente  
+**Eu quero** ter acesso ao receituário dos meus animais  
+**Para que** eu possa consultar todas as receitas emitidas.
+
+## 28. Comunicação Direta com Profissionais
+**Como um** cliente  
+**Eu quero** ter um meio de comunicação direta com os profissionais da clínica  
+**Para que** eu possa sanar dúvidas sobre meu animal a qualquer momento.
+
+## 29. Serviço de Hotel para Animais
+**Como um** cliente  
+**Eu quero** utilizar o serviço de hotel para animais oferecido pela pet shop  
+**Para que** meu animal tenha um lugar seguro para ficar enquanto eu estiver fora.
+
 
 
 # 7. Diagrama de compenentes
