@@ -454,6 +454,43 @@ classDiagram
 
 # 10. Diagrama de navegação de telas
 
+```mermaid
+graph TD;
+    Login --> Menu
+    Menu --> Cadastro_Cliente[Cadastro de Cliente]
+    Menu --> Cadastro_Animal[Cadastro de Animal]
+    Menu --> Agenda[Agenda de Atendimentos]
+    Menu --> Fichas[Consulta Fichas]
+    Menu --> Receitas[Consulta Receitas]
+    Menu --> Servicos_PetShop[Serviços Pet Shop]
+    Menu --> Comunicacao[Comunicação com Profissionais]
+    Menu --> Hotel[Serviços de Hotel para Animais]
+    
+    Cadastro_Cliente --> Cadastro_Animal
+    Cadastro_Animal --> Condicoes_Animal[Informar Condições do Animal]
+    Cadastro_Animal --> Racao[Informar Tipo de Ração]
+    Cadastro_Animal --> Habitos[Informar Hábitos do Animal]
+    
+    Agenda --> Fila_Espera[Colocar em Fila de Espera]
+    Agenda --> Marcar_Atendimento[Marcar Atendimento Futuro]
+    Agenda --> Verificar_Disponibilidade[Verificar Disponibilidade de Veterinário]
+    
+    Fichas --> Prontuarios[Consulta de Prontuários]
+    Fichas --> Exames[Anotações de Exames]
+
+    Receitas --> Visualizar_Receitas[Visualizar Receituário]
+
+    Servicos_PetShop --> Banho_Tosa[Banho e Tosa]
+    Servicos_PetShop --> Cirurgias[Cirurgias, Injeções e Curativos]
+    Servicos_PetShop --> Fisioterapia_Nutricao[Fisioterapia e Nutrição]
+    Servicos_PetShop --> Pintura[Pintura de Cachorro]
+    Servicos_PetShop --> Sobrepeso[Auxílio para Animais com Sobrepeso]
+    
+    Comunicacao --> Dúvidas_Profissionais[Sanar Dúvidas com Profissionais]
+
+    Hotel --> Marcar_Hospedagem[Marcar Hospedagem]
+```
+
 # 11. Pilha tecnologica 
 
 # 12. Requisitos de sistemas 
