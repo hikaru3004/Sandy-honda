@@ -290,7 +290,7 @@ classDiagram
 
 ## 6.1 Casos de uso
 
-![Casos de uso](https://raw.githubusercontent.com/hikaru3004/SandyHonda/refs/heads/main/Diagrama_casos_de_uso.png?token=GHSAT0AAAAAACXDDCPJ675QLXE55FB2RKSGZXUXICA)
+![Casos de uso](https://github.com/hikaru3004/SandyHonda/blob/main/Diagrama_casos_de_uso.png?raw=true)
 
 ## 6.2 Histórias de usuario
 
