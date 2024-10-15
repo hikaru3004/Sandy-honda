@@ -290,7 +290,8 @@ classDiagram
 
 ## 6.1 Casos de uso
 
-![Casos de uso](https://raw.githubusercontent.com/hikaru3004/SandyHonda/refs/heads/main/Diagrama_casos_de_uso.png?token=GHSAT0AAAAAACXDDCPJXTXZVPIQBEIH7J4IZXTLW6A)
+![Casos de uso](Diagrama_casos_de_uso.png)
+
 
 ## 6.2 Histórias de usuario
 
@@ -443,7 +444,11 @@ classDiagram
 
 # 7. Diagrama de compenentes
 
+![alt text](Diagrama_de_componente.png)
+
 # 8. Diagrama de implantação
+
+![alt text](Diagrama_de_implantação.png)
 
 # 9. Protótipo de telas
 
