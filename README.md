@@ -51,7 +51,7 @@
   - [13.1. Lado do Cliente](#131-lado-do-cliente)
   - [13.2. Lado Servidor](#132-lado-servidor)
 - [14. Manutenção, instalação e novas funcionalidades](#14-manutenção-instalação-e-novas-funcionalidades)
-  - [14.1. instalado no servidor](#141-instalado-no-servidor)
+  - [14.1. Instalado no servidor](#141-instalado-no-servidor)
   - [14.2. Manutenção](#142-manutenção)
   - [14.3. Novas funionalidades](#143-novas-funionalidades)
 - [15. Treinamento](#15-treinamento)
@@ -602,7 +602,7 @@ graph TD;
 
 # 14. Manutenção, instalação e novas funcionalidades
 
-## 14.1. instalado no servidor 
+## 14.1. Instalado no servidor 
 
 manutenção 
 
@@ -614,9 +614,9 @@ manter o mesmo mas manter funcionando extamente como é
 
 1. Formalização do pedido;
 2. Cliente não dá palpite em beleza de tela;
-3. Decidir sob 3 critérios:
-   a) A equipe tem tempo?
-   b) É economicamente viável?
+3. Decidir sob 3 critérios: <br>
+   a) A equipe tem tempo? <br>
+   b) É economicamente viável? <br>
    c) É tecnologicamente viável?
 
 
