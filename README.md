@@ -45,12 +45,22 @@
 - [10. Diagrama de navegação de telas](#10-diagrama-de-navegação-de-telas)
 - [11. Pilha tecnologica](#11-pilha-tecnologica)
 - [12. Requisitos de sistemas](#12-requisitos-de-sistemas)
+  - [12.1. Requisitos lado do Cliente](#121-requisitos-lado-do-cliente)
+  - [12.1. Requisitos lado do Servidor](#121-requisitos-lado-do-servidor)
 - [13. Considerações sobre segurança](#13-considerações-sobre-segurança)
-- [14. Manutenção e instalação](#14-manutenção-e-instalação)
-- [15. Glossário](#15-glossário)
+  - [13.1. Lado do Cliente](#131-lado-do-cliente)
+  - [13.2. Lado Servidor](#132-lado-servidor)
+- [14. Manutenção, instalação e novas funcionalidades](#14-manutenção-instalação-e-novas-funcionalidades)
+  - [14.1. instalado no servidor](#141-instalado-no-servidor)
+  - [14.2. Manutenção](#142-manutenção)
+  - [14.3. Novas funionalidades](#143-novas-funionalidades)
+- [15. Treinamento](#15-treinamento)
+  - [15.1. Usuário](#151-usuário)
+  - [15.2. Admin](#152-admin)
 - [16. Script SQL](#16-script-sql)
   - [16.1 Comando create table:](#161-comando-create-table)
   - [16.2 Comandos para inserção de dados ficticios:](#162-comandos-para-inserção-de-dados-ficticios)
+
 
 # 1. Introdução
 
@@ -94,7 +104,10 @@ Descrição do cenário onde o sistema deverá funcionar:
 
 Descrição do sistema e suas relações.
 
+DEscreva o que o sistema entrega do ponto de vista do usuario final.
+
 # 4. Diagrama ER
+
 ## 4.1.  Descrição Entidade e Relacionamento
 
 
@@ -178,8 +191,6 @@ erDiagram
     ANIMAL ||--o{ HOTEL : "fica hospedado em"
     ATENDENTE ||--o{ AGENDA : "verifica"
 ```
-
-
 
 # 5. Diagrama de classes
 
@@ -296,11 +307,13 @@ classDiagram
 ## 6.2 Histórias de usuario
 
 ### 1. Marcar Animais com RFID
+
 **Como um** veterinário  
 **Eu quero** marcar os animais com um código RFID  
 **Para que** eu possa identificá-los rapidamente no sistema e garantir o controle sobre seu histórico.
 
 ### 2. Atender Apenas Gatos e Cachorros
+
 **Como uma** clínica veterinária  
 **Eu quero** limitar o atendimento a gatos e cachorros  
 **Para que** possamos focar nosso atendimento especializado nessas espécies.
@@ -493,17 +506,132 @@ graph TD;
 
 # 11. Pilha tecnologica 
 
+```mermaid
+graph TD;
+    subgraph Frontend
+        VueJS[Vue.js]
+        Vuetify[Vuetify]
+        HTML[HTML5]
+        CSS[CSS3]
+        JavaScript[JavaScript]
+    end
+
+    subgraph Backend
+        Java["Java Spring Boot"]
+        MySQL[MySQL Database]
+        NodeJS["Node.js API"]
+        Hibernate[Hibernate ORM]
+    end
+
+    subgraph Infraestrutura
+        Docker[Docker]
+        Nginx[Nginx Server]
+        Linux[Linux Server]
+        Tomcat[Apache Tomcat]
+    end
+
+    subgraph DevOps
+        Jenkins[Jenkins CI/CD]
+        Git[Git Version Control]
+        GitLab[GitLab Repository]
+        SonarQube[SonarQube Code Quality]
+    end
+
+    subgraph External_Services
+        Firebase[Firebase Authentication]
+        AWS[AWS Cloud Services]
+    end
+
+    VueJS --> Vuetify
+    VueJS --> JavaScript
+    VueJS --> HTML
+    VueJS --> CSS
+
+    Java --> Hibernate
+    Java --> MySQL
+    NodeJS --> Java
+
+    Docker --> Nginx
+    Docker --> Linux
+    Tomcat --> Java
+
+    Jenkins --> Docker
+    Jenkins --> GitLab
+    Git --> GitLab
+    GitLab --> Jenkins
+    SonarQube --> GitLab
+
+    Firebase --> VueJS
+    AWS --> Docker
+
+
+```
+
 # 12. Requisitos de sistemas 
+
+## 12.1. Requisitos lado do Cliente
+
+
+
+## 12.1. Requisitos lado do Servidor
 
 # 13. Considerações sobre segurança
 
-# 14. Manutenção e instalação
+## 13.1. Lado do Cliente
 
-# 15. Glossário
+1. Regras de senha;
+2. catcha, qtda min. caracteres, caracteres especieais, etc...
+3. autenticação de 2 fatores;
+4. recuperação de senha com e-mail.
+5. código no e-mail.
+6. anti virus.
+7. 
+>> mini politica de segurança
+
+## 13.2. Lado Servidor
+
+* Linux
+* Politica de backup e aplicação de banco
+
+1. 1x por mês 1 full backup;
+2. 1x a cada 15 dias 1 full backup;
+3. no final de cada dia um backup incremental;
+4. o admin do sistema não acessa dados do usuario;
+5. 
+6. 
+
+# 14. Manutenção, instalação e novas funcionalidades
+
+## 14.1. instalado no servidor 
+
+manutenção 
+
+## 14.2. Manutenção
+
+manter o mesmo mas manter funcionando extamente como é
+
+## 14.3. Novas funionalidades
+
+1. Formalização do pedido;
+2. Cliente não dá palpite em beleza de tela;
+3. Decidir sob 3 critérios:
+   a) A equipe tem tempo?
+   b) É economicamente viável?
+   c) É tecnologicamente viável?
+
+
+# 15. Treinamento
+
+## 15.1. Usuário
+
+## 15.2. Admin
+
+
 
 # 16. Script SQL
 
 ## 16.1 Comando create table:
+
 ```SQL
 -- Tabela para Clientes
 CREATE TABLE Cliente (
@@ -610,6 +738,7 @@ CREATE TABLE Veterinario_Atendimento (
 );
 ```
 ## 16.2 Comandos para inserção de dados ficticios:
+
 ```SQL
 -- Inserindo Clientes
 INSERT INTO Cliente (nome, telefone, endereco) VALUES 
