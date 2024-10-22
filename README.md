@@ -42,6 +42,44 @@
 - [7. Diagrama de compenentes](#7-diagrama-de-compenentes)
 - [8. Diagrama de implantação](#8-diagrama-de-implantação)
 - [9. Protótipo de telas](#9-protótipo-de-telas)
+    - [1. Tela Inicial](#1-tela-inicial)
+    - [2. Agenda](#2-agenda)
+    - [3. Editar Agenda](#3-editar-agenda)
+    - [4. Detalhes Agenda](#4-detalhes-agenda)
+    - [5. Animal](#5-animal)
+    - [6. Editar Animal](#6-editar-animal)
+    - [7. Detalhes Animal](#7-detalhes-animal)
+    - [8. Atentendente](#8-atentendente)
+    - [9. Editar Atendente](#9-editar-atendente)
+    - [10. Detalhes Atendente](#10-detalhes-atendente)
+    - [11. Cliente](#11-cliente)
+    - [12. Editar Cliente](#12-editar-cliente)
+    - [13. Detalhes Cliente](#13-detalhes-cliente)
+    - [14. Comunicação](#14-comunicação)
+    - [15. Editar Comunicação](#15-editar-comunicação)
+    - [16. Detalhes Comunicação](#16-detalhes-comunicação)
+    - [17. Ficha](#17-ficha)
+    - [18. Editar Ficha](#18-editar-ficha)
+    - [19. Detalhes Ficha](#19-detalhes-ficha)
+    - [20. Hotel](#20-hotel)
+    - [21. Editar Hotel](#21-editar-hotel)
+    - [22. Detalhe Hotel](#22-detalhe-hotel)
+    - [23. Prontuario](#23-prontuario)
+    - [24. Editar Pronturario](#24-editar-pronturario)
+    - [25. Detalhe Prontuario](#25-detalhe-prontuario)
+    - [26. Serviço](#26-serviço)
+    - [27. Editar Serviço](#27-editar-serviço)
+    - [28. Detalhe Serviço](#28-detalhe-serviço)
+    - [29. Veterinario](#29-veterinario)
+    - [30. Editar Veterinario](#30-editar-veterinario)
+    - [31. Detalhes Veterinario](#31-detalhes-veterinario)
+    - [32. Atendimento](#32-atendimento)
+    - [33. Editar Atendimento](#33-editar-atendimento)
+    - [34. Detalhes Atendimento](#34-detalhes-atendimento)
+    - [35. Grafico Barra](#35-grafico-barra)
+    - [36. Grafico Pizza](#36-grafico-pizza)
+    - [37. Grafico Linha](#37-grafico-linha)
+    - [38. Dashboard](#38-dashboard)
 - [10. Diagrama de navegação de telas](#10-diagrama-de-navegação-de-telas)
 - [11. Pilha tecnologica](#11-pilha-tecnologica)
 - [12. Requisitos de sistemas](#12-requisitos-de-sistemas)
@@ -301,7 +339,7 @@ classDiagram
 
 ## 6.1 Casos de uso
 
-![Casos de uso](Diagrama_casos_de_uso.png)
+![Casos de uso](imagens/Diagrama_casos_de_uso.png)
 
 
 ## 6.2 Histórias de usuario
@@ -457,14 +495,169 @@ classDiagram
 
 # 7. Diagrama de compenentes
 
-![alt text](Diagrama_de_componente.png)
+![alt text](imagens/Diagrama_de_componente.png)
 
 # 8. Diagrama de implantação
 
-![alt text](Diagrama_de_implantação.png)
+![alt text](imagens/Diagrama_de_implantação.png)
 
 # 9. Protótipo de telas
 
+### 1. Tela Inicial
+
+![alt text](imagens/inicial.jpeg)
+
+### 2. Agenda
+
+![!\[alt text\]](imagens/agenda.jpeg)
+
+### 3. Editar Agenda
+
+![!\[alt text\]](imagens/editar_agenda.jpeg)
+
+### 4. Detalhes Agenda
+
+![!\[alt text\]](imagens/detalhes_agenda.jpeg)
+
+### 5. Animal
+
+![!\[alt text\]](imagens/animal.jpeg)
+
+### 6. Editar Animal
+
+![!\[alt text\]](imagens/editar_animal.jpeg)
+
+### 7. Detalhes Animal
+
+![!\[alt text\]](imagens/detalhes_animal.jpeg)
+
+### 8. Atentendente
+
+![!\[alt text\]](imagens/atentendente.jpeg)
+
+### 9. Editar Atendente
+
+![!\[alt text\]](imagens/editar_atendente.jpeg)
+
+### 10. Detalhes Atendente
+
+![!\[alt text\]](imagens/detalhes_atendente.jpeg)
+
+### 11. Cliente
+
+![!\[alt text\]](imagens/cliente.jpeg)
+
+### 12. Editar Cliente
+
+![!\[alt text\]](imagens/cliente_editar.jpeg)
+
+### 13. Detalhes Cliente
+
+![!\[alt text\]](imagens/detalhes_cliente.jpeg)
+
+### 14. Comunicação
+
+![!\[alt text\]](imagens/comunicação.jpeg)
+
+### 15. Editar Comunicação
+
+![!\[alt text\]](imagens/editar_comunicação.jpeg)
+
+### 16. Detalhes Comunicação
+
+![!\[alt text\]](imagens/detalhes_comunicação.jpeg)
+
+### 17. Ficha
+
+![!\[alt text\]](imagens/ficha.jpeg)
+
+### 18. Editar Ficha
+
+![!\[alt text\]](imagens/editar_ficha.jpeg)
+
+### 19. Detalhes Ficha
+
+![!\[alt text\]](imagens/detalhes_ficha.jpeg)
+
+### 20. Hotel
+
+![!\[alt text\]](imagens/hotel.jpeg)
+
+### 21. Editar Hotel
+
+![!\[alt text\]](imagens/editar_hotel.jpeg)
+
+### 22. Detalhe Hotel
+
+![!\[alt text\]](imagens/detalhe_hotel.jpeg)
+
+### 23. Prontuario
+
+![!\[alt text\]](imagens/prontuario.jpeg)
+
+### 24. Editar Pronturario
+
+![!\[alt text\]](imagens/editar_pronturario.jpeg)
+
+### 25. Detalhe Prontuario
+
+![!\[alt text\]](imagens/detalhe_prontuario.jpeg)
+
+### 26. Serviço
+
+![!\[alt text\]](imagens/serviço.jpeg)
+
+### 27. Editar Serviço
+
+![!\[alt text\]](imagens/editar_serviço.jpeg)
+
+### 28. Detalhe Serviço
+
+![!\[alt text\]](imagens/detalhe_serviço.jpeg)
+
+### 29. Veterinario
+
+![!\[alt text\]](imagens/veterinario.jpeg)
+
+### 30. Editar Veterinario
+
+![!\[alt text\]](imagens/editar_veterinario.jpeg)
+
+### 31. Detalhes Veterinario
+
+![!\[alt text\]](imagens/detalhes_veterinario.jpeg)
+
+### 32. Atendimento
+
+![!\[alt text\]](imagens/atendimento.jpeg)
+
+### 33. Editar Atendimento
+
+![!\[alt text\]](imagens/editar_atendimento.jpeg)
+
+### 34. Detalhes Atendimento
+
+
+![!\[alt text\]](imagens/detalhes_atendimento.jpeg)
+
+
+### 35. Grafico Barra
+
+![!\[alt text\]](imagens/grafico_barra.jpeg)
+
+### 36. Grafico Pizza
+
+![!\[alt text\]](imagens/grafico_pizza.jpeg)
+
+### 37. Grafico Linha
+
+![!\[alt text\]](imagens/grafico_linha.jpeg)
+
+### 38. Dashboard
+
+![alt text](imagens/dashboard.jpeg)
+
+    
 # 10. Diagrama de navegação de telas
 
 ```mermaid
@@ -474,7 +667,8 @@ graph TD;
     Menu --> Cadastro_Animal[Cadastro de Animal]
     Menu --> Agenda[Agenda de Atendimentos]
     Menu --> Fichas[Consulta Fichas]
-    Menu --> Receitas[Consulta Receitas]
+    Menu --> 
+    Receitas[Consulta Receitas]
     Menu --> Servicos_PetShop[Serviços Pet Shop]
     Menu --> Comunicacao[Comunicação com Profissionais]
     Menu --> Hotel[Serviços de Hotel para Animais]
