@@ -1,24 +1,24 @@
 # SandyHonda
 
 - [SandyHonda](#sandyhonda)
-- [1. Introdução](#1-introdução)
-- [2. Descrição do negócio](#2-descrição-do-negócio)
+  - [1. Introdução](#1-introdução)
+  - [2. Descrição do negócio](#2-descrição-do-negócio)
   - [2.1. Requisitos](#21-requisitos)
     - [Requisitos Funcionais e Não Funcionais](#requisitos-funcionais-e-não-funcionais)
-- [3. Visão geral do sistema](#3-visão-geral-do-sistema)
+  - [3. Visão geral do sistema](#3-visão-geral-do-sistema)
     - [Visão Geral do Sistema](#visão-geral-do-sistema)
       - [**Descrição do Sistema e Suas Relações**](#descrição-do-sistema-e-suas-relações)
       - [**Relações do Sistema**](#relações-do-sistema)
-      - [**O Que o Sistema Entrega do Ponto de Vista do Usuário Final**](#o-que-o-sistema-entrega-do-ponto-de-vista-do-usuário-final)
-- [4. Diagrama ER](#4-diagrama-er)
+      - [**O que o sistema entrega do ponto de vista do usuário final**](#o-que-o-sistema-entrega-do-ponto-de-vista-do-usuário-final)
+  - [4. Diagrama ER](#4-diagrama-er)
   - [4.1.  Descrição Entidade e Relacionamento](#41--descrição-entidade-e-relacionamento)
     - [**Entidades**](#entidades)
   - [4.2. Relacionamentos](#42-relacionamentos)
     - [4.2.1 **Relacionamentos Detalhados**](#421-relacionamentos-detalhados)
-- [5. Diagrama de classes](#5-diagrama-de-classes)
+  - [5. Diagrama de classes](#5-diagrama-de-classes)
   - [5.1. Descrição das Classes e Relacionamentos](#51-descrição-das-classes-e-relacionamentos)
   - [5.2. Relacionamentos](#52-relacionamentos)
-- [6. casos de uso](#6-casos-de-uso)
+  - [6. casos de uso](#6-casos-de-uso)
   - [6.1 Casos de uso](#61-casos-de-uso)
   - [6.2 Histórias de usuario](#62-histórias-de-usuario)
     - [1. Marcar Animais com RFID](#1-marcar-animais-com-rfid)
@@ -50,14 +50,15 @@
     - [27. Acesso ao Receituário dos Animais](#27-acesso-ao-receituário-dos-animais)
     - [28. Comunicação Direta com Profissionais](#28-comunicação-direta-com-profissionais)
     - [29. Serviço de Hotel para Animais](#29-serviço-de-hotel-para-animais)
-- [7. Diagrama de compenentes](#7-diagrama-de-compenentes)
-- [8. Diagrama de implantação](#8-diagrama-de-implantação)
-- [9. Diagramas C4](#9-diagramas-c4)
+  - [7. Diagrama de compenentes](#7-diagrama-de-compenentes)
+  - [8. Diagrama de implantação](#8-diagrama-de-implantação)
+  - [9. Diagramas C4](#9-diagramas-c4)
   - [9.1. Diagrama de contexto](#91-diagrama-de-contexto)
   - [9.2. Diagrama de container](#92-diagrama-de-container)
   - [9.3. Diagrama de componente](#93-diagrama-de-componente)
   - [9.4. Diagrama de código](#94-diagrama-de-código)
-- [10. Protótipo de telas](#10-protótipo-de-telas)
+  - [10. Protótipo de telas](#10-protótipo-de-telas)
+    - [1. Login](#1-login)
     - [1. Tela Inicial](#1-tela-inicial)
     - [2. Agenda](#2-agenda)
     - [3. Editar Agenda](#3-editar-agenda)
@@ -96,33 +97,32 @@
     - [36. Grafico Pizza](#36-grafico-pizza)
     - [37. Grafico Linha](#37-grafico-linha)
     - [38. Dashboard](#38-dashboard)
-- [11. Diagrama de navegação de telas](#11-diagrama-de-navegação-de-telas)
-- [12. Pilha tecnologica](#12-pilha-tecnologica)
-- [13. Requisitos de sistemas](#13-requisitos-de-sistemas)
+  - [11. Diagrama de navegação de telas](#11-diagrama-de-navegação-de-telas)
+  - [12. Pilha tecnologica](#12-pilha-tecnologica)
+  - [13. Requisitos de sistemas](#13-requisitos-de-sistemas)
   - [13.1. Requisitos lado do Cliente](#131-requisitos-lado-do-cliente)
   - [13.2. Requisitos lado do Servidor](#132-requisitos-lado-do-servidor)
-- [14. Considerações sobre segurança](#14-considerações-sobre-segurança)
+  - [14. Considerações sobre segurança](#14-considerações-sobre-segurança)
   - [141. Lado do Cliente](#141-lado-do-cliente)
   - [14.2. Lado Servidor](#142-lado-servidor)
-- [15. Manutenção, instalação e novas funcionalidades](#15-manutenção-instalação-e-novas-funcionalidades)
+  - [15. Manutenção, instalação e novas funcionalidades](#15-manutenção-instalação-e-novas-funcionalidades)
   - [15.1. Instalado no servidor](#151-instalado-no-servidor)
   - [15.2. Manutenção](#152-manutenção)
   - [15.3. Novas funionalidades](#153-novas-funionalidades)
-- [16. Treinamento](#16-treinamento)
+  - [16. Treinamento](#16-treinamento)
   - [16.1. Usuário](#161-usuário)
   - [16.2. Admin](#162-admin)
-- [17. Script SQL](#17-script-sql)
-  - [17.1 Comando create table:](#171-comando-create-table)
-  - [17.2 Comandos para inserção de dados ficticios:](#172-comandos-para-inserção-de-dados-ficticios)
+  - [17. Script SQL](#17-script-sql)
+  - [17.1 Comando create table](#171-comando-create-table)
+  - [17.2 Comandos para inserção de dados ficticios](#172-comandos-para-inserção-de-dados-ficticios)
 
-
-# 1. Introdução
+## 1. Introdução
 
 O projeto a seguir apresenta um sistema desenvolvido para um petshop. A empresa é condsiderada micro e iniciou suas atividades recentemente. Ao possuir serviços exclusivos, os sistemas presentes no mercado não se enquadra, desta forma, os proprietários decidiram desenvolver uma solução. Esta solução é detalhada a seguir:
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
-# 2. Descrição do negócio
+## 2. Descrição do negócio
 
 Descrição do cenário onde o sistema deverá funcionar:
 
@@ -156,7 +156,7 @@ Descrição do cenário onde o sistema deverá funcionar:
 28. A pet shop deve oferecer um meio de comunicação direta com os profissionais para que os donos possão sanar eventuais dúvidas.
 29. A petshop oferece serviços de hotel para animais.
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
 ## 2.1. Requisitos
 
@@ -196,9 +196,9 @@ Descrição do cenário onde o sistema deverá funcionar:
 |       | Suportar mais de 100 conexões simultâneas sem perda significativa de desempenho.                      |
 |       | Utilizar autenticação baseada em tokens para garantir segurança no login dos usuários.               |
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
-# 3. Visão geral do sistema
+## 3. Visão geral do sistema
 
 ### Visão Geral do Sistema
 
@@ -223,13 +223,14 @@ O sistema para o pet shop é um software integrado que gerencia as operações d
 O sistema também inclui integração com dispositivos RFID para identificação rápida dos animais, simplificando o atendimento e os processos administrativos.
 
 #### **Relações do Sistema**
-- **Cliente ⇔ Sistema:** 
+
+- **Cliente ⇔ Sistema:**
   - O cliente utiliza a interface do sistema para registrar animais, agendar consultas, visualizar prontuários, e comunicar-se com profissionais a fim de solucionar possiveís dúvidas.
-- **Atendente ⇔ Sistema:** 
+- **Atendente ⇔ Sistema:**
   - O atendente organiza a agenda, verifica disponibilidade de veterinários e gerencia filas de espera.
-- **Veterinário ⇔ Sistema:** 
+- **Veterinário ⇔ Sistema:**
   - O veterinário utiliza o sistema para registrar informações no prontuário, emitir receitas e gerenciar as condições dos animais.
-- **Administrador ⇔ Sistema:** 
+- **Administrador ⇔ Sistema:**
   - O administrador monitora operações, controla dados do banco e garante o bom funcionamento do sistema.
 
 #### **O que o sistema entrega do ponto de vista do usuário final**
@@ -262,9 +263,9 @@ Do ponto de vista do usuário final, o sistema entrega:
 
 O sistema, portanto, é uma solução completa que melhora a experiência do cliente, agiliza os processos internos e aumenta a eficiência geral do estabelecimento.
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
-# 4. Diagrama ER
+## 4. Diagrama ER
 
 ```mermaid
 erDiagram
@@ -366,9 +367,9 @@ erDiagram
 - **HotelParaAnimais**: Representa o serviço de hospedagem oferecido para animais. Atributo principal: Descrição.  
 - **Comunicação**: Canal de contato entre os clientes e profissionais.  
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
-## 4.2. Relacionamentos 
+## 4.2. Relacionamentos
 
 1. **Cliente - Animal**: Um cliente pode possuir vários animais, mas cada animal pertence a apenas um cliente.  
 2. **Cliente - Atendimento**: Um cliente realiza vários atendimentos.  
@@ -434,9 +435,9 @@ erDiagram
     - Tipo: 1:N (A comunicação atende vários clientes).  
     - Explicação: O pet shop mantém um canal aberto para sanar dúvidas ou fornecer informações.
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
-# 5. Diagrama de classes
+## 5. Diagrama de classes
 
 ```mermaid
 
@@ -540,9 +541,10 @@ classDiagram
 
     Servico "0..*" --o "1" Animal : aplica-se a
 ```
-[Voltar ao Início](#SandyHonda)
 
-## 5.1. Descrição das Classes e Relacionamentos 
+[Voltar ao Início](#sandyhonda)
+
+## 5.1. Descrição das Classes e Relacionamentos
 
 1. **Cliente:**  
    Contém informações sobre os clientes da clínica. Cada cliente pode possuir vários animais e agendar consultas.  
@@ -594,7 +596,7 @@ classDiagram
     - Atributos: `idMensagem`, `idCliente`, `idVeterinario`, `conteudo`, `data`.  
     - Métodos: `enviarMensagem()`, `visualizarMensagens()`.
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
 ## 5.2. Relacionamentos
 
@@ -638,15 +640,15 @@ classDiagram
   - A agenda gerencia os horários disponíveis para consultas e serviços.  
   - Uma consulta ou serviço utiliza **um horário específico** da agenda.
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
-# 6. casos de uso 
+## 6. casos de uso
 
 ## 6.1 Casos de uso
 
 ![Casos de uso](imagens/Diagrama_casos_de_uso.png)
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
 ## 6.2 Histórias de usuario
 
@@ -663,156 +665,183 @@ classDiagram
 **Para que** possamos focar nosso atendimento especializado nessas espécies.
 
 ### 3. Cadastro de Clientes e Animais
+
 **Como um** cliente  
 **Eu quero** fazer um cadastro no sistema para mim e para meus animais  
 **Para que** eu possa ter meus dados e os dados dos meus animais registrados no sistema.
 
 ### 4. Informar Condições do Animal
+
 **Como um** cliente  
 **Eu quero** informar as condições nas quais meu animal chegou à clínica  
 **Para que** os veterinários possam ter essa informação no atendimento.
 
 ### 5. Informar Tipo de Ração
+
 **Como um** cliente  
 **Eu quero** informar o tipo de ração que meu animal consome  
 **Para que** o veterinário possa ajustar o tratamento ou fazer recomendações adequadas.
 
 ### 6. Informar Hábitos do Animal
+
 **Como um** cliente  
 **Eu quero** informar os hábitos do meu animal  
 **Para que** o veterinário tenha mais informações para realizar o diagnóstico.
 
 ### 7. Atendimentos com Mais de Um Veterinário
+
 **Como um** sistema  
 **Eu quero** permitir que mais de um veterinário atenda o mesmo animal  
 **Para que** seja possível realizar atendimentos colaborativos e mais completos.
 
 ### 8. Agenda do Dia para Atendimentos
+
 **Como um** cliente  
 **Eu quero** que meu animal seja atendido de acordo com uma agenda do dia  
 **Para que** eu possa planejar melhor meu tempo e o atendimento do meu animal.
 
 ### 9. Ficha e Prontuário para Cada Animal
+
 **Como um** veterinário  
 **Eu quero** criar uma ficha e um prontuário para cada animal atendido  
 **Para que** eu possa registrar o histórico médico e o tratamento do animal.
 
 ### 10. Marcar Horários Futuramente
+
 **Como um** cliente  
 **Eu quero** poder agendar atendimentos futuros para meu animal  
 **Para que** eu possa garantir um horário conveniente para o tratamento.
 
 ### 11. Atendimento Gera Receita
+
 **Como um** veterinário  
 **Eu quero** gerar uma receita médica ao finalizar o atendimento  
 **Para que** o cliente saiba qual medicação ou tratamento seu animal precisa seguir.
 
 ### 12. Atendimento Inicial pelo Atendente
+
 **Como um** cliente  
 **Eu quero** ser atendido inicialmente por um atendente ao chegar à clínica  
 **Para que** meu caso seja direcionado adequadamente.
 
 ### 13. Verificar Agenda de Veterinários
+
 **Como um** atendente  
 **Eu quero** verificar se há veterinários disponíveis na agenda  
 **Para que** eu possa confirmar se o atendimento pode ser realizado.
 
 ### 14. Colocar na Fila de Espera
+
 **Como um** atendente  
 **Eu quero** colocar o cliente e seu animal na fila de espera  
 **Para que** eles aguardem caso não haja veterinário disponível no momento.
 
 ### 15. Levar Cliente ao Veterinário
+
 **Como um** atendente  
 **Eu quero** encaminhar o cliente e seu animal ao veterinário  
 **Para que** o atendimento possa ser realizado após o cadastro.
 
 ### 16. Realizar Entrevista com o Dono
+
 **Como um** veterinário  
 **Eu quero** realizar uma entrevista com o dono do animal  
 **Para que** eu possa coletar todas as informações necessárias para o atendimento.
 
 ### 17. Registro do Resultado da Entrevista
+
 **Como um** veterinário  
 **Eu quero** registrar o resultado da entrevista com o dono em um formulário  
 **Para que** essas informações estejam disponíveis no prontuário.
 
 ### 18. Anotar Observações no Prontuário
+
 **Como um** veterinário  
 **Eu quero** anotar minhas observações no prontuário do animal  
 **Para que** o histórico de saúde do animal esteja sempre atualizado.
 
 ### 19. Receitar Medicamentos
+
 **Como um** veterinário  
 **Eu quero** prescrever uma receita médica para o animal  
 **Para que** o dono saiba qual tratamento seguir.
 
 ### 20. Serviços de Banho e Tosa
+
 **Como um** cliente  
 **Eu quero** utilizar os serviços de banho e tosa oferecidos pela clínica  
 **Para que** meu animal esteja sempre bem cuidado.
 
 ### 21. Realização de Cirurgias, Injeções e Curativos
+
 **Como um** veterinário  
 **Eu quero** realizar cirurgias, injeções e curativos  
 **Para que** o animal receba o tratamento necessário.
 
 ### 22. Serviço de Pintura de Cachorro
+
 **Como um** cliente  
 **Eu quero** escolher o serviço de pintura de cachorro  
 **Para que** meu animal possa receber um tratamento estético diferenciado.
 
 ### 23. Serviços de Fisioterapia e Nutrição
+
 **Como um** cliente  
 **Eu quero** utilizar os serviços de fisioterapia e nutrição oferecidos pela clínica  
 **Para que** meu animal tenha uma melhor qualidade de vida.
 
 ### 24. Visualizar Animais e Fichas
+
 **Como um** cliente  
 **Eu quero** visualizar meus animais e suas fichas de atendimento  
 **Para que** eu possa acompanhar o histórico médico de cada um deles.
 
 ### 25. Visualizar Receitas
+
 **Como um** cliente  
 **Eu quero** visualizar as receitas médicas dos meus animais  
 **Para que** eu saiba quais medicamentos seguir.
 
 ### 26. Auxílio para Animais com Sobrepeso
+
 **Como um** cliente  
 **Eu quero** utilizar os serviços oferecidos para animais com sobrepeso  
 **Para que** meu animal receba o suporte necessário para sua saúde.
 
 ### 27. Acesso ao Receituário dos Animais
+
 **Como um** cliente  
 **Eu quero** ter acesso ao receituário dos meus animais  
 **Para que** eu possa consultar todas as receitas emitidas.
 
 ### 28. Comunicação Direta com Profissionais
+
 **Como um** cliente  
 **Eu quero** ter um meio de comunicação direta com os profissionais da clínica  
 **Para que** eu possa sanar dúvidas sobre meu animal a qualquer momento.
 
 ### 29. Serviço de Hotel para Animais
+
 **Como um** cliente  
 **Eu quero** utilizar o serviço de hotel para animais oferecido pela pet shop  
 **Para que** meu animal tenha um lugar seguro para ficar enquanto eu estiver fora.
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
-# 7. Diagrama de compenentes
+## 7. Diagrama de compenentes
 
 ![alt text](imagens/Diagrama_de_componente.png)
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
-# 8. Diagrama de implantação
+## 8. Diagrama de implantação
 
 ![alt text](imagens/Diagrama_de_implantação.png)
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
-# 9. Diagramas C4
- 
+## 9. Diagramas C4
+
 ## 9.1. Diagrama de contexto
 
 ```mermaid
@@ -887,9 +916,13 @@ graph TD
 
 ```
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
-# 10. Protótipo de telas
+## 10. Protótipo de telas
+
+### 1. Login
+
+![alt text](imagens/login.png)
 
 ### 1. Tela Inicial
 
@@ -1025,9 +1058,7 @@ graph TD
 
 ### 34. Detalhes Atendimento
 
-
 ![!\[alt text\]](imagens/detalhes_atendimento.jpeg)
-
 
 ### 35. Grafico Barra
 
@@ -1045,16 +1076,15 @@ graph TD
 
 ![alt text](imagens/dashboard.jpeg)
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
-    
-# 11. Diagrama de navegação de telas
+## 11. Diagrama de navegação de telas
 
 fazer no figma
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
-# 12. Pilha tecnologica 
+## 12. Pilha tecnologica
 
 ```mermaid
 graph TD;
@@ -1117,19 +1147,17 @@ graph TD;
 
 ```
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
-# 13. Requisitos de sistemas 
+## 13. Requisitos de sistemas
 
 ## 13.1. Requisitos lado do Cliente
 
-
-
 ## 13.2. Requisitos lado do Servidor
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
-# 14. Considerações sobre segurança
+## 14. Considerações sobre segurança
 
 ## 141. Lado do Cliente
 
@@ -1139,27 +1167,28 @@ graph TD;
 4. recuperação de senha com e-mail.
 5. código no e-mail.
 6. anti virus.
-7. 
+7.
+
 >> mini politica de segurança
 
 ## 14.2. Lado Servidor
 
-* Linux
-* Politica de backup e aplicação de banco
+- Linux
+- Politica de backup e aplicação de banco
 
 1. 1x por mês 1 full backup;
 2. 1x a cada 15 dias 1 full backup;
 3. no final de cada dia um backup incremental;
 4. o admin do sistema não acessa dados do usuario;
-5. 
+5.
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
-# 15. Manutenção, instalação e novas funcionalidades
+## 15. Manutenção, instalação e novas funcionalidades
 
-## 15.1. Instalado no servidor 
+## 15.1. Instalado no servidor
 
-manutenção 
+manutenção
 
 ## 15.2. Manutenção
 
@@ -1169,25 +1198,24 @@ manter o mesmo mas manter funcionando extamente como é
 
 1. Formalização do pedido;
 2. Cliente não dá palpite em beleza de tela;
-3. Decidir sob 3 critérios: <br>
-   a) A equipe tem tempo? <br>
-   b) É economicamente viável? <br>
-   c) É tecnologicamente viável?
+3. Decidir sob 3 critérios:
+   - a) A equipe tem tempo?
+   - b) É economicamente viável?
+   - c) É tecnologicamente viável?
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
-# 16. Treinamento
+## 16. Treinamento
 
 ## 16.1. Usuário
 
 ## 16.2. Admin
 
+[Voltar ao Início](#sandyhonda)
 
-[Voltar ao Início](#SandyHonda)
+## 17. Script SQL
 
-# 17. Script SQL
-
-## 17.1 Comando create table:
+## 17.1 Comando create table
 
 ```SQL
 -- Tabela para Clientes
@@ -1295,9 +1323,9 @@ CREATE TABLE Veterinario_Atendimento (
 );
 ```
 
-[Voltar ao Início](#SandyHonda)
+[Voltar ao Início](#sandyhonda)
 
-## 17.2 Comandos para inserção de dados ficticios:
+## 17.2 Comandos para inserção de dados ficticios
 
 ```SQL
 -- Inserindo Clientes
@@ -1368,4 +1396,5 @@ INSERT INTO Veterinario_Atendimento (id_animal, id_veterinario) VALUES
 (3, 3),
 (1, 3); -- O animal 1 também foi atendido por outro veterinário
 ```
-[Voltar ao Início](#SandyHonda)
+
+[Voltar ao Início](#sandyhonda)
