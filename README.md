@@ -232,7 +232,7 @@ O sistema também inclui integração com dispositivos RFID para identificação
 - **Administrador ⇔ Sistema:** 
   - O administrador monitora operações, controla dados do banco e garante o bom funcionamento do sistema.
 
-#### **O Que o Sistema Entrega do Ponto de Vista do Usuário Final**
+#### **O que o sistema entrega do ponto de vista do usuário final**
 
 Do ponto de vista do usuário final, o sistema entrega:
 
