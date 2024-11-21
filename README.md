@@ -6,9 +6,18 @@
   - [2.1. Requisitos](#21-requisitos)
     - [Requisitos Funcionais e Não Funcionais](#requisitos-funcionais-e-não-funcionais)
 - [3. Visão geral do sistema](#3-visão-geral-do-sistema)
+    - [Visão Geral do Sistema](#visão-geral-do-sistema)
+      - [**Descrição do Sistema e Suas Relações**](#descrição-do-sistema-e-suas-relações)
+      - [**Relações do Sistema**](#relações-do-sistema)
+      - [**O Que o Sistema Entrega do Ponto de Vista do Usuário Final**](#o-que-o-sistema-entrega-do-ponto-de-vista-do-usuário-final)
 - [4. Diagrama ER](#4-diagrama-er)
   - [4.1.  Descrição Entidade e Relacionamento](#41--descrição-entidade-e-relacionamento)
+    - [**Entidades**](#entidades)
+  - [4.2. Relacionamentos](#42-relacionamentos)
+    - [4.2.1 **Relacionamentos Detalhados**](#421-relacionamentos-detalhados)
 - [5. Diagrama de classes](#5-diagrama-de-classes)
+  - [5.1. Descrição das Classes e Relacionamentos](#51-descrição-das-classes-e-relacionamentos)
+  - [5.2. Relacionamentos](#52-relacionamentos)
 - [6. casos de uso](#6-casos-de-uso)
   - [6.1 Casos de uso](#61-casos-de-uso)
   - [6.2 Histórias de usuario](#62-histórias-de-usuario)
@@ -191,14 +200,71 @@ Descrição do cenário onde o sistema deverá funcionar:
 
 # 3. Visão geral do sistema
 
-Descrição do sistema e suas relações.
+### Visão Geral do Sistema
 
-Descreva o que o sistema entrega do ponto de vista do usuario final.
+#### **Descrição do Sistema e Suas Relações**
+
+O sistema para o pet shop é um software integrado que gerencia as operações de uma clínica veterinária e pet shop. Ele conecta clientes, atendentes, veterinários e administradores, permitindo o cadastro, controle e acompanhamento de animais, além de gerenciar serviços oferecidos pelo estabelecimento, como banho, tosa, consultas, e hospedagem. O sistema está dividido em três principais camadas:
+
+1. **Frontend (Interface do Usuário):**
+   - Fornece uma interface intuitiva para clientes e funcionários acessarem o sistema.
+   - É acessível via dispositivos móveis e desktops.
+   - Permite o login seguro e o acesso às funcionalidades, como agendamento, visualização de fichas e receitas, e comunicação direta com os profissionais.
+
+2. **Backend (Processamento de Dados):**
+   - Responsável por gerenciar a lógica do sistema, incluindo o controle de agendamentos, geração de receitas, e armazenamento de prontuários.
+   - Utiliza um banco de dados relacional para armazenar dados de clientes, animais, etc.
+   - Processa os dados recebidos do frontend e os organiza no banco de dados.
+
+3. **Banco de Dados:**
+   - Armazena as informações de clientes, animais, serviços, agendas, receitas e fichas de atendimento.
+   - Garante integridade e segurança dos dados seguindo normas de proteção, como a LGPD.
+
+O sistema também inclui integração com dispositivos RFID para identificação rápida dos animais, simplificando o atendimento e os processos administrativos.
+
+#### **Relações do Sistema**
+- **Cliente ⇔ Sistema:** 
+  - O cliente utiliza a interface do sistema para registrar animais, agendar consultas, visualizar prontuários, e comunicar-se com profissionais a fim de solucionar possiveís dúvidas.
+- **Atendente ⇔ Sistema:** 
+  - O atendente organiza a agenda, verifica disponibilidade de veterinários e gerencia filas de espera.
+- **Veterinário ⇔ Sistema:** 
+  - O veterinário utiliza o sistema para registrar informações no prontuário, emitir receitas e gerenciar as condições dos animais.
+- **Administrador ⇔ Sistema:** 
+  - O administrador monitora operações, controla dados do banco e garante o bom funcionamento do sistema.
+
+#### **O Que o Sistema Entrega do Ponto de Vista do Usuário Final**
+
+Do ponto de vista do usuário final, o sistema entrega:
+
+1. **Clientes:**
+   - Facilidade para cadastrar seus dados e dos seus animais.
+   - Agendamento online de consultas e serviços.
+   - Acompanhamento de prontuários e histórico médico dos animais.
+   - Comunicação direta com veterinários e outros profissionais.
+   - Acesso rápido e seguro às receitas e fichas médicas.
+   - Serviços adicionais, como banho, tosa, hospedagem e fisioterapia.
+
+2. **Veterinários:**
+   - Agenda organizada com informações completas sobre os atendimentos.
+   - Ferramentas para registrar observações e diagnósticos no prontuário dos animais.
+   - Histórico médico dos animais para acompanhamento de tratamentos.
+   - Emissão rápida de receitas.
+
+3. **Atendentes:**
+   - Controle total da agenda de serviços e veterinários.
+   - Facilidade para gerenciar filas de espera e organizar o fluxo de clientes.
+   - Ferramentas para verificar disponibilidade de horários.
+
+4. **Administradores:**
+   - Visão geral de todas as operações da clínica e pet shop.
+   - Monitoramento do desempenho do sistema e suporte para ajustes ou melhorias.
+   - Relatórios gerenciais e dados de desempenho.
+
+O sistema, portanto, é uma solução completa que melhora a experiência do cliente, agiliza os processos internos e aumenta a eficiência geral do estabelecimento.
+
+[Voltar ao Início](#SandyHonda)
 
 # 4. Diagrama ER
-
-## 4.1.  Descrição Entidade e Relacionamento
-
 
 ```mermaid
 erDiagram
@@ -280,6 +346,94 @@ erDiagram
     ANIMAL ||--o{ HOTEL : "fica hospedado em"
     ATENDENTE ||--o{ AGENDA : "verifica"
 ```
+
+## 4.1.  Descrição Entidade e Relacionamento
+
+### **Entidades**  
+
+- **Cliente**: Representa os clientes da clínica/pet shop. Atributos principais: CPF, Nome, Endereço, e Telefone.  
+- **Animal**: Representa os animais cadastrados. Atributos principais: RFID, Nome, Espécie (gato ou cachorro), Tipo de Ração, Hábitos, e Condições de Chegada.  
+- **Veterinário**: Representa os profissionais veterinários. Atributos principais: CRMV, Nome, e Especialização.  
+- **Atendimento**: Representa cada sessão de atendimento entre o cliente, animal, e o veterinário. Atributos principais: ID, Data, e Receita gerada.  
+- **Ficha**: Detalha informações coletadas sobre o animal durante o atendimento. Atributos principais: ID, Observações, e Resultado da Entrevista.  
+- **Prontuário**: Registra observações médicas e exames realizados nos animais. Atributos principais: ID e Observações de Exame.  
+- **PetShop**: Representa os serviços gerais da clínica e pet shop. Atributo principal: Serviços oferecidos.  
+- **Receita**: Prescrições médicas geradas para os animais. Atributos principais: ID e Descrição.  
+- **Agendamento**: Representa a marcação de horários para atendimentos futuros. Atributos principais: ID e Horário.  
+- **Atendente**: Representa os profissionais responsáveis por organizar a agenda e recepcionar os clientes. Atributos principais: ID e Nome.  
+- **Cirurgia**: Serviços especializados oferecidos pelo pet shop. Atributo principal: Tipo.  
+- **Serviço**: Detalha os serviços gerais disponíveis, como banho, tosa, fisioterapia, nutrição, etc. Atributos principais: ID e Descrição.  
+- **HotelParaAnimais**: Representa o serviço de hospedagem oferecido para animais. Atributo principal: Descrição.  
+- **Comunicação**: Canal de contato entre os clientes e profissionais.  
+
+[Voltar ao Início](#SandyHonda)
+
+## 4.2. Relacionamentos 
+
+1. **Cliente - Animal**: Um cliente pode possuir vários animais, mas cada animal pertence a apenas um cliente.  
+2. **Cliente - Atendimento**: Um cliente realiza vários atendimentos.  
+3. **Animal - Atendimento**: Um animal pode ser atendido várias vezes.  
+4. **Veterinário - Atendimento**: Um veterinário realiza vários atendimentos, podendo atender diferentes animais.  
+5. **Atendimento - Receita**: Um atendimento pode gerar uma ou mais receitas para um animal.  
+6. **Animal - Ficha**: Cada animal possui uma ficha detalhando suas condições e histórico.  
+7. **Ficha - Prontuário**: A ficha está associada a um prontuário com observações adicionais.  
+8. **PetShop - Serviço**: O pet shop oferece diversos serviços aos clientes.  
+9. **PetShop - HotelParaAnimais**: O pet shop oferece hospedagem para animais.  
+10. **Cliente - PetShop**: O cliente tem acesso aos serviços e funcionalidades oferecidos pelo pet shop.  
+11. **Atendente - Agendamento**: O atendente realiza agendamentos e organiza a agenda do dia.  
+12. **Atendimento - Agendamento**: O atendimento é agendado previamente.  
+13. **PetShop - Comunicação**: O pet shop oferece um canal de comunicação direta para clientes.  
+
+### 4.2.1 **Relacionamentos Detalhados**  
+
+1. **Cliente - Animal**:  
+   - Tipo: 1:N (Um cliente possui muitos animais).  
+   - Explicação: Cada cliente cadastra os animais que possui para os atendimentos e serviços.  
+
+2. **Animal - Atendimento**:  
+   - Tipo: 1:N (Um animal pode ser atendido várias vezes).  
+   - Explicação: Um animal pode receber atendimentos regulares ou esporádicos dependendo de sua condição.  
+
+3. **Veterinário - Atendimento**:  
+   - Tipo: N:N (Vários veterinários podem atender o mesmo animal e um veterinário pode atender vários animais).  
+   - Explicação: Um atendimento pode envolver múltiplos veterinários, dependendo da complexidade.  
+
+4. **Atendimento - Receita**:  
+   - Tipo: 1:1 (Cada atendimento gera no máximo uma receita).  
+   - Explicação: O atendimento veterinário pode levar à emissão de uma receita para medicamentos ou tratamentos específicos.  
+
+5. **Animal - Ficha**:  
+   - Tipo: 1:1 (Cada animal tem sua própria ficha).  
+   - Explicação: A ficha contém informações únicas e atualizadas sobre o histórico do animal.  
+
+6. **Ficha - Prontuário**:  
+   - Tipo: 1:1 (Cada ficha está associada a um único prontuário).  
+   - Explicação: O prontuário complementa as informações médicas registradas na ficha.  
+
+7. **Cliente - Atendimento**:  
+   - Tipo: 1:N (Um cliente realiza muitos atendimentos).  
+   - Explicação: Clientes podem agendar e participar de atendimentos conforme necessário.  
+
+8. **Atendente - Agendamento**:  
+   - Tipo: 1:N (Um atendente organiza muitos agendamentos).  
+   - Explicação: O atendente verifica a disponibilidade da agenda e realiza as marcações.  
+
+9. **PetShop - Serviço**:  
+   - Tipo: 1:N (O pet shop oferece diversos serviços).  
+   - Explicação: Serviços como banho, tosa, nutrição, e fisioterapia estão disponíveis para os animais.  
+
+10. **PetShop - HotelParaAnimais**:  
+    - Tipo: 1:N (O pet shop pode hospedar muitos animais).  
+    - Explicação: O serviço de hospedagem é oferecido como uma opção adicional para os clientes.  
+
+11. **Cliente - PetShop**:  
+    - Tipo: 1:N (Um cliente pode contratar vários serviços do pet shop).  
+    - Explicação: Os clientes têm acesso a funcionalidades e serviços como visualização de receitas e comunicação com profissionais.  
+
+12. **PetShop - Comunicação**:  
+    - Tipo: 1:N (A comunicação atende vários clientes).  
+    - Explicação: O pet shop mantém um canal aberto para sanar dúvidas ou fornecer informações.
+
 [Voltar ao Início](#SandyHonda)
 
 # 5. Diagrama de classes
@@ -388,12 +542,111 @@ classDiagram
 ```
 [Voltar ao Início](#SandyHonda)
 
+## 5.1. Descrição das Classes e Relacionamentos 
+
+1. **Cliente:**  
+   Contém informações sobre os clientes da clínica. Cada cliente pode possuir vários animais e agendar consultas.  
+   - Atributos: `idCliente`, `nome`, `telefone`, `email`, `endereço`.  
+   - Métodos: `cadastrarCliente()`, `editarCliente()`, `listarAnimais()`, `visualizarHistorico()`.
+
+2. **Animal:**  
+   Contém informações detalhadas sobre os animais, como identificação, tipo, hábitos, e condição de chegada.  
+   - Atributos: `idAnimal`, `nome`, `tipo` (gato ou cachorro), `condicao`, `tipoRacao`, `habitos`, `RFID`.  
+   - Métodos: `cadastrarAnimal()`, `atualizarCondicao()`, `listarConsultas()`.
+
+3. **Atendente:**  
+   Representa os funcionários que organizam os atendimentos e gerenciam a fila de espera.  
+   - Atributos: `idAtendente`, `nome`, `turno`, `telefone`.  
+   - Métodos: `verificarAgenda()`, `inserirFilaEspera()`, `direcionarClienteVeterinario()`.
+
+4. **Veterinario:**  
+   Contém informações sobre os veterinários e suas responsabilidades no atendimento.  
+   - Atributos: `idVeterinario`, `nome`, `especialidade`, `CRMV`.  
+   - Métodos: `realizarEntrevista()`, `examinarAnimal()`, `emitirReceita()`, `registrarProntuario()`.
+
+5. **Consulta:**  
+   Representa o atendimento realizado para um animal em uma data específica.  
+   - Atributos: `idConsulta`, `data`, `hora`, `idAnimal`, `idVeterinario`, `prontuario`.  
+   - Métodos: `agendarConsulta()`, `registrarProntuario()`, `emitirReceita()`.
+
+6. **Prontuario:**  
+   Contém o registro médico do animal, incluindo observações do veterinário e recomendações de tratamento.  
+   - Atributos: `idProntuario`, `idAnimal`, `data`, `observacoes`.  
+   - Métodos: `adicionarObservacao()`, `visualizarProntuario()`.
+
+7. **Receita:**  
+   Representa os medicamentos e tratamentos prescritos para o animal após uma consulta.  
+   - Atributos: `idReceita`, `idConsulta`, `descricao`, `dataEmissao`.  
+   - Métodos: `gerarReceita()`, `visualizarReceita()`.
+
+8. **ServicoPetShop:**  
+   Representa serviços adicionais, como banho, tosa, hospedagem, ou fisioterapia.  
+   - Atributos: `idServico`, `descricao`, `preco`, `idAnimal`.  
+   - Métodos: `agendarServico()`, `listarServicos()`.
+
+9. **Agenda:**  
+   Gerencia os horários disponíveis para atendimentos e serviços.  
+   - Atributos: `idAgenda`, `data`, `hora`, `disponibilidade`.  
+   - Métodos: `verificarDisponibilidade()`, `reservarHorario()`.
+
+10. **Comunicação:**  
+    Facilita a troca de mensagens entre os clientes e os profissionais do pet shop.  
+    - Atributos: `idMensagem`, `idCliente`, `idVeterinario`, `conteudo`, `data`.  
+    - Métodos: `enviarMensagem()`, `visualizarMensagens()`.
+
+[Voltar ao Início](#SandyHonda)
+
+## 5.2. Relacionamentos
+
+- **Cliente ↔ Animal:**  
+  - Um cliente pode ter **vários animais**.  
+  - Um animal pertence a **um cliente**.  
+
+- **Animal ↔ Veterinario:**  
+  - Um animal pode ser atendido por **vários veterinários**.  
+  - Um veterinário pode atender **vários animais**.  
+
+- **Animal ↔ Consulta:**  
+  - Um animal pode ter **várias consultas**.  
+  - Cada consulta é associada a **um animal**.  
+
+- **Consulta ↔ Veterinario:**  
+  - Uma consulta é realizada por **um veterinário**.  
+  - Um veterinário pode realizar **várias consultas**.  
+
+- **Consulta ↔ Prontuario:**  
+  - Cada consulta gera **um prontuário**.  
+  - Um prontuário está associado a **uma consulta**.  
+
+- **Consulta ↔ Receita:**  
+  - Uma consulta pode gerar **uma ou mais receitas**.  
+  - Uma receita está associada a **uma consulta**.  
+
+- **Animal ↔ ServicoPetShop:**  
+  - Um animal pode utilizar **vários serviços**.  
+  - Cada serviço está associado a **um animal**.  
+
+- **Cliente ↔ Comunicação:**  
+  - Um cliente pode trocar **várias mensagens** com profissionais.  
+  - Cada mensagem pertence a **um cliente**.  
+
+- **Veterinario ↔ Comunicação:**  
+  - Um veterinário pode receber **várias mensagens**.  
+  - Cada mensagem pode ser enviada a **um veterinário**.  
+
+- **Agenda ↔ Consulta/Servicos:**  
+  - A agenda gerencia os horários disponíveis para consultas e serviços.  
+  - Uma consulta ou serviço utiliza **um horário específico** da agenda.
+
+[Voltar ao Início](#SandyHonda)
+
 # 6. casos de uso 
 
 ## 6.1 Casos de uso
 
 ![Casos de uso](imagens/Diagrama_casos_de_uso.png)
 
+[Voltar ao Início](#SandyHonda)
 
 ## 6.2 Histórias de usuario
 
@@ -634,7 +887,7 @@ graph TD
 
 ```
 
-[Voltar ao Início](# SandyHonda)
+[Voltar ao Início](#SandyHonda)
 
 # 10. Protótipo de telas
 
@@ -797,43 +1050,8 @@ graph TD
     
 # 11. Diagrama de navegação de telas
 
-```mermaid
-graph TD;
-    Login --> Menu
-    Menu --> Cadastro_Cliente[Cadastro de Cliente]
-    Menu --> Cadastro_Animal[Cadastro de Animal]
-    Menu --> Agenda[Agenda de Atendimentos]
-    Menu --> Fichas[Consulta Fichas]
-    Menu --> 
-    Receitas[Consulta Receitas]
-    Menu --> Servicos_PetShop[Serviços Pet Shop]
-    Menu --> Comunicacao[Comunicação com Profissionais]
-    Menu --> Hotel[Serviços de Hotel para Animais]
-    
-    Cadastro_Cliente --> Cadastro_Animal
-    Cadastro_Animal --> Condicoes_Animal[Informar Condições do Animal]
-    Cadastro_Animal --> Racao[Informar Tipo de Ração]
-    Cadastro_Animal --> Habitos[Informar Hábitos do Animal]
-    
-    Agenda --> Fila_Espera[Colocar em Fila de Espera]
-    Agenda --> Marcar_Atendimento[Marcar Atendimento Futuro]
-    Agenda --> Verificar_Disponibilidade[Verificar Disponibilidade de Veterinário]
-    
-    Fichas --> Prontuarios[Consulta de Prontuários]
-    Fichas --> Exames[Anotações de Exames]
+fazer no figma
 
-    Receitas --> Visualizar_Receitas[Visualizar Receituário]
-
-    Servicos_PetShop --> Banho_Tosa[Banho e Tosa]
-    Servicos_PetShop --> Cirurgias[Cirurgias, Injeções e Curativos]
-    Servicos_PetShop --> Fisioterapia_Nutricao[Fisioterapia e Nutrição]
-    Servicos_PetShop --> Pintura[Pintura de Cachorro]
-    Servicos_PetShop --> Sobrepeso[Auxílio para Animais com Sobrepeso]
-    
-    Comunicacao --> Dúvidas_Profissionais[Sanar Dúvidas com Profissionais]
-
-    Hotel --> Marcar_Hospedagem[Marcar Hospedagem]
-```
 [Voltar ao Início](#SandyHonda)
 
 # 12. Pilha tecnologica 
