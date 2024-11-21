@@ -3,6 +3,8 @@
 - [SandyHonda](#sandyhonda)
 - [1. Introdução](#1-introdução)
 - [2. Descrição do negócio](#2-descrição-do-negócio)
+  - [2.1. Requisitos](#21-requisitos)
+    - [Requisitos Funcionais e Não Funcionais](#requisitos-funcionais-e-não-funcionais)
 - [3. Visão geral do sistema](#3-visão-geral-do-sistema)
 - [4. Diagrama ER](#4-diagrama-er)
   - [4.1.  Descrição Entidade e Relacionamento](#41--descrição-entidade-e-relacionamento)
@@ -41,7 +43,12 @@
     - [29. Serviço de Hotel para Animais](#29-serviço-de-hotel-para-animais)
 - [7. Diagrama de compenentes](#7-diagrama-de-compenentes)
 - [8. Diagrama de implantação](#8-diagrama-de-implantação)
-- [9. Protótipo de telas](#9-protótipo-de-telas)
+- [9. Diagramas C4](#9-diagramas-c4)
+  - [9.1. Diagrama de contexto](#91-diagrama-de-contexto)
+  - [9.2. Diagrama de container](#92-diagrama-de-container)
+  - [9.3. Diagrama de componente](#93-diagrama-de-componente)
+  - [9.4. Diagrama de código](#94-diagrama-de-código)
+- [10. Protótipo de telas](#10-protótipo-de-telas)
     - [1. Tela Inicial](#1-tela-inicial)
     - [2. Agenda](#2-agenda)
     - [3. Editar Agenda](#3-editar-agenda)
@@ -80,24 +87,24 @@
     - [36. Grafico Pizza](#36-grafico-pizza)
     - [37. Grafico Linha](#37-grafico-linha)
     - [38. Dashboard](#38-dashboard)
-- [10. Diagrama de navegação de telas](#10-diagrama-de-navegação-de-telas)
-- [11. Pilha tecnologica](#11-pilha-tecnologica)
-- [12. Requisitos de sistemas](#12-requisitos-de-sistemas)
-  - [12.1. Requisitos lado do Cliente](#121-requisitos-lado-do-cliente)
-  - [12.1. Requisitos lado do Servidor](#121-requisitos-lado-do-servidor)
-- [13. Considerações sobre segurança](#13-considerações-sobre-segurança)
-  - [13.1. Lado do Cliente](#131-lado-do-cliente)
-  - [13.2. Lado Servidor](#132-lado-servidor)
-- [14. Manutenção, instalação e novas funcionalidades](#14-manutenção-instalação-e-novas-funcionalidades)
-  - [14.1. Instalado no servidor](#141-instalado-no-servidor)
-  - [14.2. Manutenção](#142-manutenção)
-  - [14.3. Novas funionalidades](#143-novas-funionalidades)
-- [15. Treinamento](#15-treinamento)
-  - [15.1. Usuário](#151-usuário)
-  - [15.2. Admin](#152-admin)
-- [16. Script SQL](#16-script-sql)
-  - [16.1 Comando create table:](#161-comando-create-table)
-  - [16.2 Comandos para inserção de dados ficticios:](#162-comandos-para-inserção-de-dados-ficticios)
+- [11. Diagrama de navegação de telas](#11-diagrama-de-navegação-de-telas)
+- [12. Pilha tecnologica](#12-pilha-tecnologica)
+- [13. Requisitos de sistemas](#13-requisitos-de-sistemas)
+  - [13.1. Requisitos lado do Cliente](#131-requisitos-lado-do-cliente)
+  - [13.2. Requisitos lado do Servidor](#132-requisitos-lado-do-servidor)
+- [14. Considerações sobre segurança](#14-considerações-sobre-segurança)
+  - [141. Lado do Cliente](#141-lado-do-cliente)
+  - [14.2. Lado Servidor](#142-lado-servidor)
+- [15. Manutenção, instalação e novas funcionalidades](#15-manutenção-instalação-e-novas-funcionalidades)
+  - [15.1. Instalado no servidor](#151-instalado-no-servidor)
+  - [15.2. Manutenção](#152-manutenção)
+  - [15.3. Novas funionalidades](#153-novas-funionalidades)
+- [16. Treinamento](#16-treinamento)
+  - [16.1. Usuário](#161-usuário)
+  - [16.2. Admin](#162-admin)
+- [17. Script SQL](#17-script-sql)
+  - [17.1 Comando create table:](#171-comando-create-table)
+  - [17.2 Comandos para inserção de dados ficticios:](#172-comandos-para-inserção-de-dados-ficticios)
 
 
 # 1. Introdução
@@ -140,11 +147,53 @@ Descrição do cenário onde o sistema deverá funcionar:
 28. A pet shop deve oferecer um meio de comunicação direta com os profissionais para que os donos possão sanar eventuais dúvidas.
 29. A petshop oferece serviços de hotel para animais.
 
+[Voltar ao Início](#SandyHonda)
+
+## 2.1. Requisitos
+
+### Requisitos Funcionais e Não Funcionais
+
+| **Tipo de Requisito** | **Descrição**                                                                                           |
+|------------------------|-------------------------------------------------------------------------------------------------------|
+| **Funcional**          | Marcar animais com RFID.                                                                              |
+|           | Realizar cadastro dos clientes e seus animais.                                                       |
+|           | Permitir que clientes informem as condições dos animais ao chegar.                                    |
+|           | Registrar o tipo de ração consumida pelo animal.                                                     |
+|           | Registrar os hábitos do animal.                                                                      |
+|           | Permitir que mais de um veterinário atenda o mesmo animal.                                            |
+|           | Gerenciar uma agenda de atendimento diário para os animais.                                          |
+|           | Criar ficha e prontuário para cada animal atendido.                                                  |
+|           | Permitir o agendamento de horários de atendimento futuros.                                           |
+|           | Gerar uma receita após o atendimento.                                                                |
+|           | Permitir o atendimento de clientes por um atendente na chegada.                                      |
+|           | Verificar disponibilidade de agenda com veterinários.                                                |
+|           | Gerenciar uma fila de espera, se necessário.                                                         |
+|           | Realizar entrevistas com donos dos animais e armazenar os resultados.                                |
+|           | Registrar observações do veterinário no prontuário do animal.                                        |
+|           | Oferecer serviços de banho, tosa, cirurgias, injeções e curativos.                                   |
+|           | Disponibilizar serviços de fisioterapia, nutrição e pintura de cachorros.                            |
+|           | Permitir que clientes visualizem fichas e receitas dos seus animais.                                 |
+|           | Auxiliar donos de animais com sobrepeso.                                                             |
+|           | Oferecer um meio de comunicação direta entre clientes e profissionais.                               |
+|           | Disponibilizar serviços de hotel para animais.                                                       |
+| **Não Funcional**      | O sistema deve ser acessível por dispositivos móveis e desktops.                                      |
+|       | Garantir a segurança dos dados armazenados no sistema.                                               |
+|       | Oferecer tempos de resposta inferiores a 2 segundos para operações comuns.                           |
+|       | Garantir alta disponibilidade do sistema, com uptime superior a 99%.                                 |
+|       | Permitir integração com dispositivos RFID para identificação dos animais.                            |
+|       | Armazenar os dados em um banco de dados relacional (ex.: MySQL).                                      |
+|       | Garantir conformidade com a Lei Geral de Proteção de Dados (LGPD).                                   |
+|       | Implementar sistema de notificações em tempo real para atualizações sobre o status dos animais.       |
+|       | Suportar mais de 100 conexões simultâneas sem perda significativa de desempenho.                      |
+|       | Utilizar autenticação baseada em tokens para garantir segurança no login dos usuários.               |
+
+[Voltar ao Início](#SandyHonda)
+
 # 3. Visão geral do sistema
 
 Descrição do sistema e suas relações.
 
-DEscreva o que o sistema entrega do ponto de vista do usuario final.
+Descreva o que o sistema entrega do ponto de vista do usuario final.
 
 # 4. Diagrama ER
 
@@ -231,6 +280,7 @@ erDiagram
     ANIMAL ||--o{ HOTEL : "fica hospedado em"
     ATENDENTE ||--o{ AGENDA : "verifica"
 ```
+[Voltar ao Início](#SandyHonda)
 
 # 5. Diagrama de classes
 
@@ -336,6 +386,7 @@ classDiagram
 
     Servico "0..*" --o "1" Animal : aplica-se a
 ```
+[Voltar ao Início](#SandyHonda)
 
 # 6. casos de uso 
 
@@ -493,17 +544,99 @@ classDiagram
 **Eu quero** utilizar o serviço de hotel para animais oferecido pela pet shop  
 **Para que** meu animal tenha um lugar seguro para ficar enquanto eu estiver fora.
 
-
+[Voltar ao Início](#SandyHonda)
 
 # 7. Diagrama de compenentes
 
 ![alt text](imagens/Diagrama_de_componente.png)
 
+[Voltar ao Início](#SandyHonda)
+
 # 8. Diagrama de implantação
 
 ![alt text](imagens/Diagrama_de_implantação.png)
 
-# 9. Protótipo de telas
+[Voltar ao Início](#SandyHonda)
+
+# 9. Diagramas C4
+ 
+## 9.1. Diagrama de contexto
+
+```mermaid
+graph TD
+    Client[Cliente] -->|Acessa| WebApp[Aplicação Web/Cliente]
+    WebApp -->|Envia Dados| Server[Servidor Backend]
+    Server -->|Armazena e Recupera| DB[Banco de Dados]
+    Server -->|Envia Mensagens| RFID[Leitor RFID]
+    Server -->|Envia Notificações| Notif[Serviço de Notificação]
+    Server -->|Comunica com| Vet[Veterinário]
+    Server -->|Comunica com| Atendente[Atendente]
+```
+
+## 9.2. Diagrama de container
+
+```mermaid
+graph TD
+    subgraph Cliente
+        Browser[Browser Aplicativo Web]
+    end
+
+    subgraph Servidor
+        Backend[Backend Spring Boot]
+        Frontend[Frontend Vue.js]
+        API[API REST]
+        DBService[Banco de Dados MySQL]
+        Notification[Serviço de Notificações]
+        RFIDService[Integração com Leitor RFID]
+    end
+
+    Browser --> Frontend
+    Frontend --> API
+    API --> Backend
+    Backend --> DBService
+    Backend --> Notification
+    Backend --> RFIDService
+
+```
+
+## 9.3. Diagrama de componente
+
+```mermaid
+graph TD
+    API[API REST] -->|Consulta/Gravação| ClientController[Controlador Cliente]
+    API -->|Consulta/Gravação| AnimalController[Controlador Animal]
+    API -->|Consulta| ScheduleController[Controlador Agenda]
+    API -->|Comunica com| RFIDService[Serviço de RFID]
+    API -->|Comunica com| NotificationService[Serviço de Notificações]
+    
+    subgraph Backend Spring Boot
+        ClientController --> ClientService[Serviço de Cliente]
+        AnimalController --> AnimalService[Serviço de Animal]
+        ScheduleController --> ScheduleService[Serviço de Agenda]
+        ClientService --> DB[Repositório Cliente]
+        AnimalService --> DB[Repositório Animal]
+        ScheduleService --> DB[Repositório Agenda]
+    end
+
+```
+
+## 9.4. Diagrama de código
+
+```mermaid
+graph TD
+    classDef entity fill:#f9f,stroke:#333,stroke-width:2;
+
+    ClientService --> ClientRepository
+    AnimalService --> AnimalRepository
+    ScheduleService --> ScheduleRepository
+
+    class ClientRepository,AnimalRepository,ScheduleRepository entity
+
+```
+
+[Voltar ao Início](# SandyHonda)
+
+# 10. Protótipo de telas
 
 ### 1. Tela Inicial
 
@@ -659,8 +792,10 @@ classDiagram
 
 ![alt text](imagens/dashboard.jpeg)
 
+[Voltar ao Início](#SandyHonda)
+
     
-# 10. Diagrama de navegação de telas
+# 11. Diagrama de navegação de telas
 
 ```mermaid
 graph TD;
@@ -699,8 +834,9 @@ graph TD;
 
     Hotel --> Marcar_Hospedagem[Marcar Hospedagem]
 ```
+[Voltar ao Início](#SandyHonda)
 
-# 11. Pilha tecnologica 
+# 12. Pilha tecnologica 
 
 ```mermaid
 graph TD;
@@ -763,17 +899,21 @@ graph TD;
 
 ```
 
-# 12. Requisitos de sistemas 
+[Voltar ao Início](#SandyHonda)
 
-## 12.1. Requisitos lado do Cliente
+# 13. Requisitos de sistemas 
+
+## 13.1. Requisitos lado do Cliente
 
 
 
-## 12.1. Requisitos lado do Servidor
+## 13.2. Requisitos lado do Servidor
 
-# 13. Considerações sobre segurança
+[Voltar ao Início](#SandyHonda)
 
-## 13.1. Lado do Cliente
+# 14. Considerações sobre segurança
+
+## 141. Lado do Cliente
 
 1. Regras de senha;
 2. catcha, qtda min. caracteres, caracteres especieais, etc...
@@ -784,7 +924,7 @@ graph TD;
 7. 
 >> mini politica de segurança
 
-## 13.2. Lado Servidor
+## 14.2. Lado Servidor
 
 * Linux
 * Politica de backup e aplicação de banco
@@ -794,19 +934,20 @@ graph TD;
 3. no final de cada dia um backup incremental;
 4. o admin do sistema não acessa dados do usuario;
 5. 
-6. 
 
-# 14. Manutenção, instalação e novas funcionalidades
+[Voltar ao Início](#SandyHonda)
 
-## 14.1. Instalado no servidor 
+# 15. Manutenção, instalação e novas funcionalidades
+
+## 15.1. Instalado no servidor 
 
 manutenção 
 
-## 14.2. Manutenção
+## 15.2. Manutenção
 
 manter o mesmo mas manter funcionando extamente como é
 
-## 14.3. Novas funionalidades
+## 15.3. Novas funionalidades
 
 1. Formalização do pedido;
 2. Cliente não dá palpite em beleza de tela;
@@ -815,18 +956,20 @@ manter o mesmo mas manter funcionando extamente como é
    b) É economicamente viável? <br>
    c) É tecnologicamente viável?
 
+[Voltar ao Início](#SandyHonda)
 
-# 15. Treinamento
+# 16. Treinamento
 
-## 15.1. Usuário
+## 16.1. Usuário
 
-## 15.2. Admin
+## 16.2. Admin
 
 
+[Voltar ao Início](#SandyHonda)
 
-# 16. Script SQL
+# 17. Script SQL
 
-## 16.1 Comando create table:
+## 17.1 Comando create table:
 
 ```SQL
 -- Tabela para Clientes
@@ -933,7 +1076,10 @@ CREATE TABLE Veterinario_Atendimento (
     FOREIGN KEY (id_veterinario) REFERENCES Veterinario(id_veterinario)
 );
 ```
-## 16.2 Comandos para inserção de dados ficticios:
+
+[Voltar ao Início](#SandyHonda)
+
+## 17.2 Comandos para inserção de dados ficticios:
 
 ```SQL
 -- Inserindo Clientes
@@ -1004,4 +1150,4 @@ INSERT INTO Veterinario_Atendimento (id_animal, id_veterinario) VALUES
 (3, 3),
 (1, 3); -- O animal 1 também foi atendido por outro veterinário
 ```
-
+[Voltar ao Início](#SandyHonda)
