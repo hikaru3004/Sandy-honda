@@ -1289,6 +1289,8 @@ graph TD;
   - Tempo limite de sessão inativa configurável (padrão: 15 minutos).
   - Possibilidade de salvar credenciais de login com segurança no navegador.
 
+[Voltar ao Início](#sandyhonda)
+
 ## 13.2. Requisitos lado do Servidor
 
 ### Tipo de Sistema Operacional
@@ -1450,6 +1452,8 @@ Conexões Seguras
    - Verificar se a identidade do cliente está autenticada antes de enviar mensagens.
 4. **Agendamento e Serviços**:
    - Implementar confirmação via e-mail/SMS para horários agendados.
+
+[Voltar ao Início](#sandyhonda)
 
 ## 14.2. Lado Servidor
 
@@ -1654,6 +1658,8 @@ Conexões Seguras
 - Configurar o servidor para escalar horizontalmente (adicionando novos servidores) ou verticalmente (aumentando os recursos).
 - Utilizar serviços como **Docker** para containerizar a aplicação e facilitar a replicação.
 
+[Voltar ao Início](#sandyhonda)
+
 ## 15.2. Manutenção
 
 ### **1. Manutenção Corretiva**
@@ -1767,6 +1773,8 @@ Ajustes no sistema para garantir sua compatibilidade com novos ambientes tecnol�
   - Estabelecer um SLA (Acordo de Nível de Serviço) para resposta a problemas críticos (ex.: resolução em até 4 horas).
 - **Avaliações Periódicas**:
   - Realizar auditorias trimestrais para identificar melhorias de desempenho e segurança.
+
+[Voltar ao Início](#sandyhonda)
 
 ## 15.3. Novas funionalidades
 
@@ -1970,6 +1978,8 @@ Este manual descreve as etapas e regras de negócio para o funcionamento da Pet+
 - **Injeções:** Serviços de aplicação de medicamentos são realizados por profissionais qualificados.
 - **Acompanhamento nutricional:** Os clientes podem obter orientações para melhorar a saúde e nutrição de seus animais.
 - **Hotel para animais:** Um espaço seguro e confortável para estadia de curto ou longo prazo.
+
+[Voltar ao Início](#sandyhonda)
 
 ## 16.2. Admin
 
