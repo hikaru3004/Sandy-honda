@@ -8,8 +8,8 @@
   - [3. Visão geral do sistema](#3-visão-geral-do-sistema)
     - [Visão Geral do Sistema](#visão-geral-do-sistema)
       - [**Descrição do Sistema e Suas Relações**](#descrição-do-sistema-e-suas-relações)
-      - [**Relações do Sistema**](#relações-do-sistema)
-      - [**O que o sistema entrega do ponto de vista do usuário final**](#o-que-o-sistema-entrega-do-ponto-de-vista-do-usuário-final)
+      - [Relações do Sistema](#relações-do-sistema)
+      - [O que o sistema entrega do ponto de vista do usuário final](#o-que-o-sistema-entrega-do-ponto-de-vista-do-usuário-final)
   - [4. Diagrama ER](#4-diagrama-er)
   - [4.1.  Descrição Entidade e Relacionamento](#41--descrição-entidade-e-relacionamento)
     - [**Entidades**](#entidades)
@@ -18,7 +18,7 @@
   - [5. Diagrama de classes](#5-diagrama-de-classes)
   - [5.1. Descrição das Classes e Relacionamentos](#51-descrição-das-classes-e-relacionamentos)
   - [5.2. Relacionamentos](#52-relacionamentos)
-  - [6. casos de uso](#6-casos-de-uso)
+  - [6. Casos de uso](#6-casos-de-uso)
   - [6.1 Casos de uso](#61-casos-de-uso)
   - [6.2 Histórias de usuario](#62-histórias-de-usuario)
     - [1. Marcar Animais com RFID](#1-marcar-animais-com-rfid)
@@ -50,7 +50,7 @@
     - [27. Acesso ao Receituário dos Animais](#27-acesso-ao-receituário-dos-animais)
     - [28. Comunicação Direta com Profissionais](#28-comunicação-direta-com-profissionais)
     - [29. Serviço de Hotel para Animais](#29-serviço-de-hotel-para-animais)
-  - [7. Diagrama de compenentes](#7-diagrama-de-compenentes)
+  - [7. Diagrama de componentes](#7-diagrama-de-componentes)
   - [8. Diagrama de implantação](#8-diagrama-de-implantação)
   - [9. Diagramas C4](#9-diagramas-c4)
   - [9.1. Diagrama de contexto](#91-diagrama-de-contexto)
@@ -101,9 +101,24 @@
   - [12. Pilha tecnologica](#12-pilha-tecnologica)
   - [13. Requisitos de sistemas](#13-requisitos-de-sistemas)
   - [13.1. Requisitos lado do Cliente](#131-requisitos-lado-do-cliente)
+    - [**Sistema Operacional**](#sistema-operacional)
+    - [**Navegador**](#navegador)
+    - [**Acesso à Internet**](#acesso-à-internet)
+    - [**Recursos de Hardware**](#recursos-de-hardware)
+    - [**Permissões e Configurações de Segurança**](#permissões-e-configurações-de-segurança)
+    - [**Forma de Autenticação**](#forma-de-autenticação)
   - [13.2. Requisitos lado do Servidor](#132-requisitos-lado-do-servidor)
+    - [Tipo de Sistema Operacional](#tipo-de-sistema-operacional)
+    - [**Tipo de Processador**](#tipo-de-processador)
+    - [**Memória RAM**](#memória-ram)
+    - [**Armazenamento**](#armazenamento)
+    - [**Rede**](#rede)
+    - [**Segurança**](#segurança)
+    - [**Capacidade de Escalar o Ambiente**](#capacidade-de-escalar-o-ambiente)
+    - [**Serviços, Servidor e Mídia para Backups**](#serviços-servidor-e-mídia-para-backups)
+    - [**Requisitos Adicionais**](#requisitos-adicionais)
   - [14. Considerações sobre segurança](#14-considerações-sobre-segurança)
-  - [141. Lado do Cliente](#141-lado-do-cliente)
+  - [14.1. Lado do Cliente](#141-lado-do-cliente)
   - [14.2. Lado Servidor](#142-lado-servidor)
   - [15. Manutenção, instalação e novas funcionalidades](#15-manutenção-instalação-e-novas-funcionalidades)
   - [15.1. Instalado no servidor](#151-instalado-no-servidor)
@@ -118,7 +133,7 @@
 
 ## 1. Introdução
 
-O projeto a seguir apresenta um sistema desenvolvido para um petshop. A empresa é condsiderada micro e iniciou suas atividades recentemente. Ao possuir serviços exclusivos, os sistemas presentes no mercado não se enquadra, desta forma, os proprietários decidiram desenvolver uma solução. Esta solução é detalhada a seguir:
+O projeto a seguir apresenta um sistema desenvolvido para um petshop. A empresa é considerada micro e iniciou suas atividades recentemente. Ao possuir serviços exclusivos, os sistemas presentes no mercado não se enquadra, desta forma, os proprietários decidiram desenvolver uma solução. Esta solução é detalhada a seguir:
 
 [Voltar ao Início](#sandyhonda)
 
@@ -155,6 +170,7 @@ Descrição do cenário onde o sistema deverá funcionar:
 27. A pet shop deve oferecer aos clientes um lugar para ter acesso ao receituario dos animais.
 28. A pet shop deve oferecer um meio de comunicação direta com os profissionais para que os donos possão sanar eventuais dúvidas.
 29. A petshop oferece serviços de hotel para animais.
+30. Nome da empresa: Clinica especializada em animais Pet+.
 
 [Voltar ao Início](#sandyhonda)
 
@@ -222,7 +238,7 @@ O sistema para o pet shop é um software integrado que gerencia as operações d
 
 O sistema também inclui integração com dispositivos RFID para identificação rápida dos animais, simplificando o atendimento e os processos administrativos.
 
-#### **Relações do Sistema**
+#### Relações do Sistema
 
 - **Cliente ⇔ Sistema:**
   - O cliente utiliza a interface do sistema para registrar animais, agendar consultas, visualizar prontuários, e comunicar-se com profissionais a fim de solucionar possiveís dúvidas.
@@ -233,7 +249,7 @@ O sistema também inclui integração com dispositivos RFID para identificação
 - **Administrador ⇔ Sistema:**
   - O administrador monitora operações, controla dados do banco e garante o bom funcionamento do sistema.
 
-#### **O que o sistema entrega do ponto de vista do usuário final**
+#### O que o sistema entrega do ponto de vista do usuário final
 
 Do ponto de vista do usuário final, o sistema entrega:
 
@@ -260,8 +276,6 @@ Do ponto de vista do usuário final, o sistema entrega:
    - Visão geral de todas as operações da clínica e pet shop.
    - Monitoramento do desempenho do sistema e suporte para ajustes ou melhorias.
    - Relatórios gerenciais e dados de desempenho.
-
-O sistema, portanto, é uma solução completa que melhora a experiência do cliente, agiliza os processos internos e aumenta a eficiência geral do estabelecimento.
 
 [Voltar ao Início](#sandyhonda)
 
@@ -642,7 +656,7 @@ classDiagram
 
 [Voltar ao Início](#sandyhonda)
 
-## 6. casos de uso
+## 6. Casos de uso
 
 ## 6.1 Casos de uso
 
@@ -828,7 +842,7 @@ classDiagram
 
 [Voltar ao Início](#sandyhonda)
 
-## 7. Diagrama de compenentes
+## 7. Diagrama de componentes
 
 ![alt text](imagens/Diagrama_de_componente.png)
 
@@ -1080,70 +1094,65 @@ graph TD
 
 ## 11. Diagrama de navegação de telas
 
-fazer no figma
+![Diagrama de Telas](imagens/DiagramaTelas.png)
 
 [Voltar ao Início](#sandyhonda)
 
 ## 12. Pilha tecnologica
 
 ```mermaid
+
 graph TD;
-    subgraph Frontend
-        VueJS[Vue.js]
-        Vuetify[Vuetify]
-        HTML[HTML5]
-        CSS[CSS3]
-        JavaScript[JavaScript]
-    end
+    A[Pilha Tecnológica] --> B[Frontend]
+    A --> C[Backend]
+    A --> D[Banco de Dados]
+    A --> E[Servidor Web]
+    A --> F[Segurança]
+    A --> G[Ambiente de Desenvolvimento]
+    
+    %% Frontend Details
+    B --> B1[HTML/CSS/JavaScript]
+    B --> B2[Scriptcase]
+    B --> B3[Formulários Dinâmicos de Cadastro e Atendimento]
+    B --> B4[Visualização de Prontuários e Fichas]
+    B --> B5[Gestão de Agendas e Fila de Espera]
+    
+    %% Backend Details
+    C --> C1[PHP]
+    C --> C2[Framework Laravel]
+    C --> C3[Componentes do Sistema]
+    C1 --> C4[Gerenciamento de Sessões e Usuários]
+    C1 --> C5[Validação de Dados]
+    C3 --> C6[Cadastro de Cliente e Animal]
+    C3 --> C7[Atendimentos e Prontuários]
+    C3 --> C8[Controle de Agendas e Fila de Espera]
+    C3 --> C9[Serviços do Pet Shop]
+    C3 --> C10[Comunicação com RFID]
 
-    subgraph Backend
-        Java["Java Spring Boot"]
-        MySQL[MySQL Database]
-        NodeJS["Node.js API"]
-        Hibernate[Hibernate ORM]
-    end
+    %% Database Details
+    D --> D1[MySQL]
+    D --> D2[phpMyAdmin ou MySQL Server]
+    D --> D3[Tabelas: Clientes, Animais, Atendimentos, Prontuários, Veterinários, Serviços]
+    D --> D4[Relatórios de Atendimento e Receita]
+    
+    %% Web Server Details
+    E --> E1[Apache HTTP Server]
+    E --> E2[XAMPP, WAMP ou MAMP]
+    E --> E3[Gerenciamento de Hospedagem Local e Nuvem]
 
-    subgraph Infraestrutura
-        Docker[Docker]
-        Nginx[Nginx Server]
-        Linux[Linux Server]
-        Tomcat[Apache Tomcat]
-    end
-
-    subgraph DevOps
-        Jenkins[Jenkins CI/CD]
-        Git[Git Version Control]
-        GitLab[GitLab Repository]
-        SonarQube[SonarQube Code Quality]
-    end
-
-    subgraph External_Services
-        Firebase[Firebase Authentication]
-        AWS[AWS Cloud Services]
-    end
-
-    VueJS --> Vuetify
-    VueJS --> JavaScript
-    VueJS --> HTML
-    VueJS --> CSS
-
-    Java --> Hibernate
-    Java --> MySQL
-    NodeJS --> Java
-
-    Docker --> Nginx
-    Docker --> Linux
-    Tomcat --> Java
-
-    Jenkins --> Docker
-    Jenkins --> GitLab
-    Git --> GitLab
-    GitLab --> Jenkins
-    SonarQube --> GitLab
-
-    Firebase --> VueJS
-    AWS --> Docker
-
+    %% Security Details
+    F --> F1[SSL e TLS]
+    F --> F2[Let’s Encrypt]
+    F --> F3[Autenticação Baseada em Token JWT]
+    F --> F4[Controle de Acesso por Nível de Usuário]
+    
+    %% Development Environment Details
+    G --> G1[Visual Studio Code, Sublime Text ou PHPStorm]
+    G --> G2[Git para Controle de Versão]
+    G --> G3[GitHub, GitLab ou Bitbucket para Repositórios]
+    G --> G4[Composer para Gerenciamento de Dependências]
+    G --> G5[PHPUnit para Testes Automatizados]
+    G --> G6[Docker para Contêineres]
 
 ```
 
@@ -1153,23 +1162,226 @@ graph TD;
 
 ## 13.1. Requisitos lado do Cliente
 
+### **Sistema Operacional**
+
+- **Compatibilidade**:
+  - Windows 10 ou superior.
+  - macOS Catalina ou superior.
+  - Linux (Ubuntu 20.04 ou superior).
+  - Android 10 ou superior.
+  - iOS 13 ou superior.
+
+### **Navegador**
+
+- **Requisitos mínimos**:
+  - Google Chrome (v90 ou superior).
+  - Mozilla Firefox (v88 ou superior).
+  - Microsoft Edge (v90 ou superior).
+  - Safari (v14 ou superior).
+- **Configuração obrigatória**:
+  - Suporte a JavaScript habilitado.
+  - Cookies habilitados para autenticação e sessão.
+
+### **Acesso à Internet**
+
+- **Largura de banda mínima**:
+  - Conexão estável de 1 Mbps para navegação básica.
+  - 5 Mbps recomendados para carregamento rápido de fichas e formulários.
+  - Acesso offline restrito a visualização de informações previamente sincronizadas.
+
+### **Recursos de Hardware**
+
+- **PC ou Mobile**:
+  - Processador de 2 GHz (dual-core) ou superior.
+  - Memória RAM de 4 GB (mínimo), recomendados 8 GB.
+  - Armazenamento: 100 MB livres para cache do navegador e dados locais.
+- **Resolução de tela**:
+  - Mínima: 1280x720 (HD).
+  - Recomendada: 1920x1080 (Full HD).
+  - Compatibilidade responsiva com telas menores para dispositivos móveis.
+
+### **Permissões e Configurações de Segurança**
+
+- **Permissões**:
+  - Acesso ao sistema de notificações para lembretes de agenda.
+  - Localização opcional para serviços de busca próximos (ex.: hotel para animais).
+  - Leitura de RFID opcional para interação com tags físicas.
+- **Configurações de segurança**:
+  - Certificado SSL/TLS para conexões seguras.
+  - Antivírus atualizado recomendado.
+  - Configuração mínima de firewall para permitir comunicação com o servidor.
+
+### **Forma de Autenticação**
+
+- **Métodos suportados**:
+  - Autenticação por e-mail e senha.
+  - Autenticação baseada em tokens (JWT).
+  - Suporte a autenticação em duas etapas (2FA) via aplicativo ou SMS.
+- **Sessões**:
+  - Tempo limite de sessão inativa configurável (padrão: 15 minutos).
+  - Possibilidade de salvar credenciais de login com segurança no navegador.
+
 ## 13.2. Requisitos lado do Servidor
+
+### Tipo de Sistema Operacional
+
+- **Opções Suportadas**:
+  - **Linux**: Ubuntu Server 20.04 ou superior, CentOS 8, ou Debian 10.
+  - **Windows**: Windows Server 2019 ou superior.
+- Justificativa: Compatibilidade com servidores web amplamente usados como Apache e Nginx (Linux) e IIS (Windows).
+
+### **Tipo de Processador**
+
+- **Mínimo**: Processador de 2 núcleos, 2.5 GHz.
+- **Recomendado**: Processador de 4 núcleos, 3.0 GHz ou superior (Intel Xeon ou AMD EPYC).
+
+### **Memória RAM**
+
+- **Mínimo**: 4 GB para ambiente de desenvolvimento ou teste.
+- **Recomendado**: 8 GB para ambiente de produção.
+- Justificativa: Suporte a múltiplas conexões simultâneas e serviços de banco de dados.
+
+### **Armazenamento**
+
+- **Mínimo**: 50 GB para códigos, logs, e base de dados básica.
+- **Recomendado**: 100 GB com escalabilidade para atender dados de usuários e prontuários.
+- **Tecnologia recomendada**: SSD para desempenho de leitura/escrita otimizado.
+
+### **Rede**
+
+- **Largura de Banda**:
+  - **Mínima**: 10 Mbps para pequenos acessos.
+  - **Recomendada**: 50 Mbps para múltiplos usuários simultâneos.
+- **Endereço IP ou Nome de Domínio**:
+  - IP fixo recomendado.
+  - Nome de domínio registrado para facilitar o acesso ao sistema (ex.: `clinica.pet+.com`).
+
+### **Segurança**
+
+- **Certificados SSL/TLS**:
+  - Certificados obrigatórios para todas as comunicações.
+  - Suporte a Let’s Encrypt ou certificados comerciais.
+- **Firewall**:
+  - Configuração para bloquear portas desnecessárias.
+  - Regras personalizadas para proteger contra ataques DDoS e acessos não autorizados.
+- **Autenticação e Controle**:
+  - Integração com serviços de autenticação baseados em OAuth ou JWT.
+  - Registro e auditoria de acessos no sistema.
+
+### **Capacidade de Escalar o Ambiente**
+
+- **Escalabilidade Horizontal e Vertical**:
+  - Suporte para adicionar nós adicionais ao cluster.
+  - Capacidade de upgrade de recursos (CPU, memória, armazenamento) no ambiente cloud ou local.
+- **Conexões Simultâneas**:
+  - Capacidade inicial para 50 conexões simultâneas com suporte a expansão.
+
+### **Serviços, Servidor e Mídia para Backups**
+
+- **Serviços**:
+  - Backup diário automático de banco de dados e arquivos.
+  - Ferramentas de monitoramento, como Zabbix ou Grafana.
+- **Servidor de Backup**:
+  - Backup remoto (AWS S3, Google Cloud Storage ou servidor físico dedicado).
+- **Política de Retenção**:
+  - Retenção de backups por 30 dias.
+  - Recuperação de dados em menos de 1 hora.
+
+### **Requisitos Adicionais**
+
+1. **Servidor Web**:
+   - Apache ou Nginx (Linux).
+   - IIS (Windows).
+2. **Banco de Dados**:
+   - MySQL 8.0 ou PostgreSQL 12.
+3. **Gerenciamento de Dependências**:
+   - Suporte ao Composer (PHP) para gerenciar bibliotecas e frameworks.
+4. **Ambiente Virtualizado (opcional)**:
+   - Docker ou Kubernetes para containers.
+5. **Integração com Hardware RFID**:
+   - APIs ou drivers configurados para comunicação com leitores de RFID.
 
 [Voltar ao Início](#sandyhonda)
 
 ## 14. Considerações sobre segurança
 
-## 141. Lado do Cliente
+## 14.1. Lado do Cliente
 
-1. Regras de senha;
-2. catcha, qtda min. caracteres, caracteres especieais, etc...
-3. autenticação de 2 fatores;
-4. recuperação de senha com e-mail.
-5. código no e-mail.
-6. anti virus.
-7.
+Conexões Seguras
 
->> mini politica de segurança
+- **Uso de HTTPS**:
+  - Todas as conexões entre o cliente e o servidor devem ser protegidas por HTTPS para evitar interceptação de dados sensíveis.
+
+ **Validações no Navegador**
+
+- **Compatibilidade**:
+  - Garantir que o sistema funcione apenas em navegadores atualizados e confiáveis (ex.: Chrome, Firefox, Edge, Safari).
+- **Desativação de Scripts Maliciosos**:
+  - Implementar Content Security Policy (CSP) para prevenir ataques como Cross-Site Scripting (XSS).
+
+ Validações de Páginas e Conteúdo
+
+- **Validações do Lado Cliente**:
+  - Usar JavaScript para validação de campos obrigatórios antes do envio de formulários.
+  - Exibir mensagens claras para erros de preenchimento.
+- **Validações do Lado Servidor**:
+  - Complementar as validações feitas no cliente, evitando que dados corrompidos ou maliciosos sejam enviados.
+
+ **Segurança de Autenticação**
+
+1. **Regras de Senha**:
+   - Mínimo de 8 caracteres.
+   - Uso obrigatório de:
+     - 1 letra maiúscula.
+     - 1 número.
+     - 1 caractere especial.
+   - Proibição de senhas comuns ou fáceis de adivinhar.
+2. **Autenticação em 2 Fatores (2FA)**:
+   - Implementar autenticação por meio de código enviado por e-mail ou SMS.
+3. **Recuperação de Senha**:
+   - Envio de um link ou código de redefinição para o e-mail cadastrado.
+   - O link de redefinição deve expirar após 10 minutos.
+4. **Bloqueio de Conta**:
+   - Bloquear temporariamente a conta após 5 tentativas consecutivas de login mal sucedido.
+
+ **Validação por CAPTCHA**
+
+- **Implementação**:
+  - Inserir CAPTCHA em formulários de login, cadastro e redefinição de senha.
+  - Usar reCAPTCHA ou outra solução para evitar bots.
+
+ **Antivírus**
+
+- **Recomendações ao Usuário**:
+  - Orientar clientes a utilizarem softwares antivírus atualizados para protegerem seus dispositivos.
+  - Exibir notificações sobre boas práticas de segurança na página de login e nas seções principais.
+
+ **Proteção contra Ameaças**
+
+1. **Prevenção de Sessões Não Autorizadas**:
+   - Finalizar automaticamente a sessão do cliente após 30 minutos de inatividade.
+2. **Armazenamento Seguro no Navegador**:
+   - Nunca armazenar senhas no LocalStorage ou SessionStorage.
+   - Utilizar cookies com flag `HttpOnly` e `Secure`.
+
+ **Comunicação Segura**
+
+- **Chat com Profissionais**:
+  - Todas as mensagens trocadas entre clientes e profissionais devem ser criptografadas.
+
+ **Exemplo de Aplicação em Regras de Negócio**
+
+1. **Cadastro de Cliente e Animal**:
+   - Validação completa dos dados no formulário.
+   - Captcha para evitar bots.
+   - Senhas com as regras acima.
+2. **Consulta de Fichas e Receitas**:
+   - Exigir autenticação do cliente e, se necessário, 2FA.
+3. **Comunicação Direta**:
+   - Garantir criptografia ponta-a-ponta.
+   - Verificar se a identidade do cliente está autenticada antes de enviar mensagens.
+4. **Agendamento e Serviços**:
+   - Implementar confirmação via e-mail/SMS para horários agendados.
 
 ## 14.2. Lado Servidor
 
