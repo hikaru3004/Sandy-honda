@@ -101,12 +101,12 @@
   - [12. Pilha tecnologica](#12-pilha-tecnologica)
   - [13. Requisitos de sistemas](#13-requisitos-de-sistemas)
   - [13.1. Requisitos lado do Cliente](#131-requisitos-lado-do-cliente)
-    - [**Sistema Operacional**](#sistema-operacional)
-    - [**Navegador**](#navegador)
-    - [**Acesso à Internet**](#acesso-à-internet)
-    - [**Recursos de Hardware**](#recursos-de-hardware)
-    - [**Permissões e Configurações de Segurança**](#permissões-e-configurações-de-segurança)
-    - [**Forma de Autenticação**](#forma-de-autenticação)
+    - [Sistema Operacional](#sistema-operacional)
+    - [Navegador](#navegador)
+    - [Acesso à Internet](#acesso-à-internet)
+    - [Recursos de Hardware](#recursos-de-hardware)
+    - [Permissões e Configurações de Segurança](#permissões-e-configurações-de-segurança)
+    - [Forma de Autenticação](#forma-de-autenticação)
   - [13.2. Requisitos lado do Servidor](#132-requisitos-lado-do-servidor)
     - [Tipo de Sistema Operacional](#tipo-de-sistema-operacional)
     - [**Tipo de Processador**](#tipo-de-processador)
@@ -119,21 +119,90 @@
     - [**Requisitos Adicionais**](#requisitos-adicionais)
   - [14. Considerações sobre segurança](#14-considerações-sobre-segurança)
   - [14.1. Lado do Cliente](#141-lado-do-cliente)
+    - [Validação por CAPTCHA](#validação-por-captcha)
+    - [Comunicação Segura](#comunicação-segura)
   - [14.2. Lado Servidor](#142-lado-servidor)
+    - [**Configuração de Pastas**](#configuração-de-pastas)
+      - [**Verificação de Dados de Entrada**](#verificação-de-dados-de-entrada)
+      - [**Gerenciamento de Atualizações**](#gerenciamento-de-atualizações)
+      - [**Hospedagem Segura**](#hospedagem-segura)
+      - [**Uso de Certificados no Servidor**](#uso-de-certificados-no-servidor)
+      - [**Sistema de Monitoramento e Alertas**](#sistema-de-monitoramento-e-alertas)
+      - [**Sistema Automatizado de Backup**](#sistema-automatizado-de-backup)
+      - [**Serviços Gerando Logs**](#serviços-gerando-logs)
   - [15. Manutenção, instalação e novas funcionalidades](#15-manutenção-instalação-e-novas-funcionalidades)
-  - [15.1. Instalado no servidor](#151-instalado-no-servidor)
+  - [15.1. Instalando no servidor](#151-instalando-no-servidor)
+    - [**2. Requisitos de Infraestrutura**](#2-requisitos-de-infraestrutura)
+      - [**3. Configuração de Funcionalidades Específicas**](#3-configuração-de-funcionalidades-específicas)
+      - [**4. Monitoramento e Logs**](#4-monitoramento-e-logs)
+      - [**5. Gerenciamento de Atualizações**](#5-gerenciamento-de-atualizações)
+      - [**6. Backup e Recuperação**](#6-backup-e-recuperação)
+      - [**7. Configuração de Serviços Complementares**](#7-configuração-de-serviços-complementares)
+      - [**8. Teste e Homologação**](#8-teste-e-homologação)
+      - [**9. Escalabilidade**](#9-escalabilidade)
   - [15.2. Manutenção](#152-manutenção)
+    - [**1. Manutenção Corretiva**](#1-manutenção-corretiva)
+      - [**Processo de Manutenção**](#processo-de-manutenção)
+      - [**Exemplos de Manutenção Corretiva**](#exemplos-de-manutenção-corretiva)
+    - [**2. Manutenção Evolutiva**](#2-manutenção-evolutiva)
+      - [**Processo**](#processo)
+      - [**Exemplos de Manutenção Evolutiva**](#exemplos-de-manutenção-evolutiva)
+    - [**3. Manutenção Adaptativa**](#3-manutenção-adaptativa)
+      - [**Processo**](#processo-1)
+      - [**Exemplos de Manutenção Adaptativa**](#exemplos-de-manutenção-adaptativa)
+    - [**Ferramentas de Suporte à Manutenção**](#ferramentas-de-suporte-à-manutenção)
+    - [**Política de Manutenção**](#política-de-manutenção)
   - [15.3. Novas funionalidades](#153-novas-funionalidades)
+    - [**1. Formalização do Pedido**](#1-formalização-do-pedido)
+      - [**Regras para Formalização**](#regras-para-formalização)
+    - [2. A decisão depende de 3 critérios](#2-a-decisão-depende-de-3-critérios)
+      - [**a) A Equipe Tem Tempo?**](#a-a-equipe-tem-tempo)
+      - [**b) É Economicamente Viável?**](#b-é-economicamente-viável)
+      - [**c) É Tecnologicamente Viável?**](#c-é-tecnologicamente-viável)
+    - [**3. Implementação**](#3-implementação)
+      - [**Etapas**](#etapas)
+    - [**Exemplo de Aplicação**](#exemplo-de-aplicação)
+    - [**Política de Reavaliação**](#política-de-reavaliação)
   - [16. Treinamento](#16-treinamento)
   - [16.1. Usuário](#161-usuário)
+    - [**Manual de Treinamento**](#manual-de-treinamento)
+      - [**1. Como acessar o sistema - Usuário**](#1-como-acessar-o-sistema---usuário)
+      - [**2. Operações básicas principais**](#2-operações-básicas-principais)
+        - [**Cadastro**](#cadastro)
+        - [**Agendamento**](#agendamento)
+        - [**Visualização de dados**](#visualização-de-dados)
+      - [**3. Operações avançadas**](#3-operações-avançadas)
+      - [**4. Backup (se estiver disponível)**](#4-backup-se-estiver-disponível)
+      - [**5. Como solicitar suporte**](#5-como-solicitar-suporte)
+      - [**6. Como documentar falhas**](#6-como-documentar-falhas)
+      - [**Regras de Negócio Específicas**](#regras-de-negócio-específicas)
+      - [**Serviços Exclusivos**](#serviços-exclusivos)
   - [16.2. Admin](#162-admin)
+    - [**Manual de Treinamento Lado do Administrador**](#manual-de-treinamento-lado-do-administrador)
+      - [**1. Como acessar o sistema**](#1-como-acessar-o-sistema)
+      - [**2. Principais operações básicas**](#2-principais-operações-básicas)
+        - [**Gerenciamento de usuários**](#gerenciamento-de-usuários)
+        - [**Gerenciamento de animais**](#gerenciamento-de-animais)
+      - [**3. Operações especiais**](#3-operações-especiais)
+      - [**4. Backup do sistema e dados**](#4-backup-do-sistema-e-dados)
+        - [**Realização de backup**](#realização-de-backup)
+        - [**Gerenciamento de backups**](#gerenciamento-de-backups)
+      - [**5. Como restaurar o sistema e dados**](#5-como-restaurar-o-sistema-e-dados)
+        - [**Restauração de dados**](#restauração-de-dados)
+        - [**Procedimento de recuperação**](#procedimento-de-recuperação)
+      - [**6. Gerenciamento de contas**](#6-gerenciamento-de-contas)
+        - [**Gestão de contas de usuários**](#gestão-de-contas-de-usuários)
+        - [**Gerenciamento de senhas**](#gerenciamento-de-senhas)
+      - [**7. Configurações necessárias dos servidores e clientes**](#7-configurações-necessárias-dos-servidores-e-clientes)
+        - [**Configuração do servidor**](#configuração-do-servidor)
+        - [**Configuração do cliente**](#configuração-do-cliente)
   - [17. Script SQL](#17-script-sql)
   - [17.1 Comando create table](#171-comando-create-table)
   - [17.2 Comandos para inserção de dados ficticios](#172-comandos-para-inserção-de-dados-ficticios)
 
 ## 1. Introdução
 
-O projeto a seguir apresenta um sistema desenvolvido para um petshop. A empresa é considerada micro e iniciou suas atividades recentemente. Ao possuir serviços exclusivos, os sistemas presentes no mercado não se enquadra, desta forma, os proprietários decidiram desenvolver uma solução. Esta solução é detalhada a seguir:
+O projeto a seguir apresenta um sistema desenvolvido para um petshop. A empresa nomeada Clinica especializada em animais Pet+ é considerada micro e iniciou suas atividades recentemente. Ao possuir serviços exclusivos, os sistemas presentes no mercado não se enquadra, desta forma, os proprietários decidiram desenvolver uma solução. Esta solução é detalhada a seguir:
 
 [Voltar ao Início](#sandyhonda)
 
@@ -170,7 +239,6 @@ Descrição do cenário onde o sistema deverá funcionar:
 27. A pet shop deve oferecer aos clientes um lugar para ter acesso ao receituario dos animais.
 28. A pet shop deve oferecer um meio de comunicação direta com os profissionais para que os donos possão sanar eventuais dúvidas.
 29. A petshop oferece serviços de hotel para animais.
-30. Nome da empresa: Clinica especializada em animais Pet+.
 
 [Voltar ao Início](#sandyhonda)
 
@@ -1162,7 +1230,7 @@ graph TD;
 
 ## 13.1. Requisitos lado do Cliente
 
-### **Sistema Operacional**
+### Sistema Operacional
 
 - **Compatibilidade**:
   - Windows 10 ou superior.
@@ -1171,7 +1239,7 @@ graph TD;
   - Android 10 ou superior.
   - iOS 13 ou superior.
 
-### **Navegador**
+### Navegador
 
 - **Requisitos mínimos**:
   - Google Chrome (v90 ou superior).
@@ -1182,14 +1250,14 @@ graph TD;
   - Suporte a JavaScript habilitado.
   - Cookies habilitados para autenticação e sessão.
 
-### **Acesso à Internet**
+### Acesso à Internet
 
 - **Largura de banda mínima**:
   - Conexão estável de 1 Mbps para navegação básica.
   - 5 Mbps recomendados para carregamento rápido de fichas e formulários.
   - Acesso offline restrito a visualização de informações previamente sincronizadas.
 
-### **Recursos de Hardware**
+### Recursos de Hardware
 
 - **PC ou Mobile**:
   - Processador de 2 GHz (dual-core) ou superior.
@@ -1200,7 +1268,7 @@ graph TD;
   - Recomendada: 1920x1080 (Full HD).
   - Compatibilidade responsiva com telas menores para dispositivos móveis.
 
-### **Permissões e Configurações de Segurança**
+### Permissões e Configurações de Segurança
 
 - **Permissões**:
   - Acesso ao sistema de notificações para lembretes de agenda.
@@ -1211,7 +1279,7 @@ graph TD;
   - Antivírus atualizado recomendado.
   - Configuração mínima de firewall para permitir comunicação com o servidor.
 
-### **Forma de Autenticação**
+### Forma de Autenticação
 
 - **Métodos suportados**:
   - Autenticação por e-mail e senha.
@@ -1311,8 +1379,8 @@ Conexões Seguras
 
 - **Uso de HTTPS**:
   - Todas as conexões entre o cliente e o servidor devem ser protegidas por HTTPS para evitar interceptação de dados sensíveis.
-
- **Validações no Navegador**
+  
+**Validações no Navegador**
 
 - **Compatibilidade**:
   - Garantir que o sistema funcione apenas em navegadores atualizados e confiáveis (ex.: Chrome, Firefox, Edge, Safari).
@@ -1327,7 +1395,7 @@ Conexões Seguras
 - **Validações do Lado Servidor**:
   - Complementar as validações feitas no cliente, evitando que dados corrompidos ou maliciosos sejam enviados.
 
- **Segurança de Autenticação**
+**Segurança de Autenticação**
 
 1. **Regras de Senha**:
    - Mínimo de 8 caracteres.
@@ -1344,32 +1412,32 @@ Conexões Seguras
 4. **Bloqueio de Conta**:
    - Bloquear temporariamente a conta após 5 tentativas consecutivas de login mal sucedido.
 
- **Validação por CAPTCHA**
+### Validação por CAPTCHA
 
 - **Implementação**:
   - Inserir CAPTCHA em formulários de login, cadastro e redefinição de senha.
   - Usar reCAPTCHA ou outra solução para evitar bots.
 
- **Antivírus**
+**Antivírus**
 
 - **Recomendações ao Usuário**:
   - Orientar clientes a utilizarem softwares antivírus atualizados para protegerem seus dispositivos.
   - Exibir notificações sobre boas práticas de segurança na página de login e nas seções principais.
 
- **Proteção contra Ameaças**
+**Proteção contra Ameaças**
 
 1. **Prevenção de Sessões Não Autorizadas**:
-   - Finalizar automaticamente a sessão do cliente após 30 minutos de inatividade.
+   - Finalizar automaticamente a sessão do cliente após 15 minutos de inatividade.
 2. **Armazenamento Seguro no Navegador**:
    - Nunca armazenar senhas no LocalStorage ou SessionStorage.
    - Utilizar cookies com flag `HttpOnly` e `Secure`.
 
- **Comunicação Segura**
+### Comunicação Segura
 
 - **Chat com Profissionais**:
   - Todas as mensagens trocadas entre clientes e profissionais devem ser criptografadas.
 
- **Exemplo de Aplicação em Regras de Negócio**
+**Exemplo de Aplicação em Regras de Negócio**
 
 1. **Cadastro de Cliente e Animal**:
    - Validação completa dos dados no formulário.
@@ -1385,35 +1453,421 @@ Conexões Seguras
 
 ## 14.2. Lado Servidor
 
-- Linux
-- Politica de backup e aplicação de banco
+### **Configuração de Pastas**
 
-1. 1x por mês 1 full backup;
-2. 1x a cada 15 dias 1 full backup;
-3. no final de cada dia um backup incremental;
-4. o admin do sistema não acessa dados do usuario;
-5.
+1. **Separação de Pastas**:
+   - Configurar pastas separadas para armazenar:
+     - Código do sistema.
+     - Dados de usuários (com restrição de acesso).
+     - Logs de atividades do sistema.
+   - As pastas de dados sensíveis devem ter permissões restritas no servidor (ex.: apenas leitura para serviços específicos).
+2. **Permissões de Arquivos**:
+   - Implementar política de permissões no Linux:
+     - Usuários sem privilégios não podem acessar pastas críticas.
+     - Garantir que apenas o administrador do sistema acesse arquivos de configuração.
+
+#### **Verificação de Dados de Entrada**
+
+1. **Filtragem de Dados**:
+   - Validar todas as entradas recebidas para prevenir ataques como SQL Injection e XSS.
+   - Utilizar prepared statements para interações com o banco de dados.
+2. **Sanitização de Dados**:
+   - Remover caracteres maliciosos antes de salvar informações.
+3. **Controle de Tamanho de Dados**:
+   - Limitar a quantidade de caracteres em campos de entrada, como descrições de hábitos dos animais.
+
+#### **Gerenciamento de Atualizações**
+
+1. **Atualizações do Sistema**:
+   - Manter o sistema operacional e os pacotes de software atualizados.
+   - Utilizar um cronograma para checar atualizações semanalmente.
+2. **Teste de Atualizações**:
+   - Atualizações devem ser testadas em um ambiente de homologação antes da aplicação no servidor de produção.
+
+#### **Hospedagem Segura**
+
+1. **Firewall e Monitoramento**:
+   - Configurar firewall para bloquear acessos não autorizados.
+   - Monitorar tráfego suspeito e alertar administradores.
+2. **Ambiente Isolado**:
+   - Usar contêineres ou máquinas virtuais para separar serviços críticos, como o banco de dados.
+3. **Proteção de Credenciais**:
+   - Armazenar senhas e chaves de acesso usando ferramentas como **HashiCorp Vault**.
+
+#### **Uso de Certificados no Servidor**
+
+1. **SSL/TLS**:
+   - Garantir que todo o tráfego entre o cliente e o servidor esteja criptografado.
+2. **Certificados Atualizados**:
+   - Certificados SSL devem ser renovados automaticamente antes do vencimento.
+
+#### **Sistema de Monitoramento e Alertas**
+
+1. **Logs de Sistema**:
+   - Monitorar eventos do sistema em tempo real.
+   - Gerar logs para autenticações, tentativas de acesso não autorizadas e falhas de sistema.
+2. **Alertas Automatizados**:
+   - Configurar alertas para eventos críticos, como falha no backup ou ataque DDoS.
+3. **Monitoramento de Performance**:
+   - Verificar utilização de CPU, memória e largura de banda.
+
+#### **Sistema Automatizado de Backup**
+
+1. **Backup Regular**:
+   - Implementar a seguinte política:
+     - Backup completo mensal e quinzenal.
+     - Backup incremental diário ao final do expediente.
+2. **Localização do Backup**:
+   - Armazenar backups em um local seguro, com redundância.
+   - Realizar backup na nuvem e localmente.
+3. **Restauração de Backup**:
+   - Testar periodicamente os backups para verificar integridade e garantir restauração confiável.
+
+#### **Serviços Gerando Logs**
+
+1. **Rastreamento de Atividades**:
+   - Log de acessos, ações de usuários e alterações de dados sensíveis.
+2. **Gerenciamento de Logs**:
+   - Utilizar ferramentas como **ELK Stack (ElasticSearch, Logstash e Kibana)** para análise e armazenamento de logs.
+3. **Retenção de Logs**:
+   - Manter logs por pelo menos 6 meses, seguindo normas de compliance.
 
 [Voltar ao Início](#sandyhonda)
 
 ## 15. Manutenção, instalação e novas funcionalidades
 
-## 15.1. Instalado no servidor
+## 15.1. Instalando no servidor
 
-manutenção
+**1. Configuração Inicial do Servidor**
+
+- **Sistema Operacional**:
+  - Utilizar uma distribuição Linux (preferencialmente Ubuntu Server LTS ou CentOS) por sua estabilidade e suporte.
+- **Ambiente Web**:
+  - Instalar um servidor web como **Apache** ou **Nginx**.
+  - Configurar suporte para HTTPS com **certificados SSL/TLS** válidos (Let’s Encrypt ou certificados comerciais).
+- **Linguagem e Frameworks**:
+  - Instalar e configurar a linguagem de programação usada no software (ex.: PHP 8+, Node.js, Python).
+  - Configurar os frameworks necessários para a aplicação (Laravel, Django, etc.).
+- **Banco de Dados**:
+  - Instalar e configurar um servidor de banco de dados (ex.: MySQL 8+, PostgreSQL).
+  - Criar tabelas específicas para suportar as regras de negócio, como:
+    - Cadastro de clientes.
+    - Registro de animais e fichas médicas.
+    - Agendamentos e receitas.
+- **Controle de Acesso**:
+  - Configurar chaves SSH para acesso remoto.
+  - Criar usuários específicos para manutenção e operação do servidor com permissões mínimas.
+
+---
+
+### **2. Requisitos de Infraestrutura**
+
+- **Hardware**:
+  - **Processador**: Pelo menos 4 núcleos para suportar múltiplos acessos simultâneos.
+  - **Memória RAM**: Mínimo de 8 GB para desempenho ideal.
+  - **Armazenamento**:
+    - SSD de 500 GB para o sistema operacional, software e banco de dados.
+    - Configuração adicional para backups.
+- **Rede**:
+  - Conexão de banda larga de alta velocidade.
+  - Endereço IP fixo e configuração de DNS para acesso externo.
+- **Segurança**:
+  - Configurar um firewall para permitir apenas portas necessárias (ex.: 443 para HTTPS, 22 para SSH).
+  - Instalar software de segurança como **Fail2Ban** e **iptables** para prevenir ataques.
+  - Garantir a instalação de um sistema de detecção de intrusão (IDS).
+
+---
+
+#### **3. Configuração de Funcionalidades Específicas**
+
+- **Marcar Animais com RFID**:
+  - Configurar o servidor para integrar dispositivos RFID via API ou banco de dados.
+  - Certificar-se de que o middleware de integração esteja funcionando corretamente.
+- **Cadastro de Clientes e Animais**:
+  - Garantir que o sistema web permita validação de entradas e criptografia de dados no envio e armazenamento.
+- **Gestão de Agendamentos**:
+  - Configurar um serviço de tarefas agendadas (ex.: **cron** ou **scheduler**) para notificações e gerenciamento de agendas.
+  - Criar tabelas no banco de dados para registro de agendamentos, status e notificações.
+- **Ficha e Prontuário dos Animais**:
+  - Implementar um repositório dedicado no banco de dados para armazenar dados sensíveis de forma segura e organizada.
+  - Garantir acesso controlado apenas por usuários autorizados.
+- **Gerar Receitas e Relatórios**:
+  - Configurar serviços para gerar documentos (PDFs) a partir do sistema.
+  - Certificar que o servidor tenha bibliotecas instaladas para manipulação de arquivos (ex.: **FPDF**, **wkhtmltopdf**).
+
+---
+
+#### **4. Monitoramento e Logs**
+
+- **Monitoramento do Servidor**:
+  - Instalar ferramentas como **Prometheus** e **Grafana** para monitorar CPU, RAM, espaço em disco e tráfego de rede.
+- **Logs**:
+  - Configurar logs detalhados para:
+    - Acessos ao sistema.
+    - Alterações em dados sensíveis.
+    - Falhas no servidor.
+  - Utilizar ferramentas como **ELK Stack** (Elasticsearch, Logstash e Kibana) para análise de logs.
+
+---
+
+#### **5. Gerenciamento de Atualizações**
+
+- **Sistema Operacional e Software**:
+  - Configurar atualizações automáticas para segurança.
+- **Software do Sistema**:
+  - Estabelecer um processo de controle de versão com ferramentas como **Git**.
+  - Realizar deploys em ambiente de homologação antes de enviar para produção.
+
+---
+
+#### **6. Backup e Recuperação**
+
+- **Backup Regular**:
+  - Implementar backups incrementais diários e backups completos quinzenais/mensais.
+  - Configurar scripts automatizados para armazenar backups em local seguro (ex.: Amazon S3, Google Drive).
+- **Testes de Restauração**:
+  - Realizar testes regulares para garantir que os backups podem ser restaurados sem perda de dados.
+
+---
+
+#### **7. Configuração de Serviços Complementares**
+
+- **Notificações e Comunicação**:
+  - Configurar envio de e-mails para agendamentos, lembretes e comunicações via SMTP seguro.
+  - Integrar API de mensagens (ex.: WhatsApp ou SMS) para interações rápidas.
+- **Acesso ao Receituário**:
+  - Criar um portal seguro e acessível para clientes visualizarem receitas e fichas.
+- **Comunicação Direta**:
+  - Configurar serviços de chat ou videoconferência para suporte entre clientes e veterinários.
+
+---
+
+#### **8. Teste e Homologação**
+
+- Realizar testes de carga para garantir que o sistema pode atender múltiplas conexões simultâneas.
+- Validar a funcionalidade de todas as regras de negócio antes de liberar o ambiente para produção.
+
+---
+
+#### **9. Escalabilidade**
+
+- Configurar o servidor para escalar horizontalmente (adicionando novos servidores) ou verticalmente (aumentando os recursos).
+- Utilizar serviços como **Docker** para containerizar a aplicação e facilitar a replicação.
 
 ## 15.2. Manutenção
 
-manter o mesmo mas manter funcionando extamente como é
+### **1. Manutenção Corretiva**
+
+Correção de erros e falhas identificadas no sistema, seja durante sua operação ou por relatos de usuários.
+
+#### **Processo de Manutenção**
+
+1. **Identificação do Problema**:
+   - Monitorar logs do sistema para identificar erros críticos.
+   - Receber relatórios de falhas dos usuários através de um sistema de ticket ou formulário.
+2. **Análise**:
+   - Determinar a causa raiz do problema (código, configuração ou banco de dados).
+   - Classificar o erro:
+     - **Crítico**: Impacta operações essenciais (ex.: sistema indisponível).
+     - **Moderado**: Diminui o desempenho ou gera inconsistências.
+     - **Leve**: Afeta funcionalidades não essenciais (ex.: interface ou texto incorreto).
+3. **Correção**:
+   - Realizar correções no ambiente de desenvolvimento e testar em um ambiente de homologação antes de aplicar em produção.
+4. **Testes**:
+   - Validar que a correção não gerou novos erros.
+   - Executar testes unitários, de integração e de regressão.
+5. **Registro**:
+   - Documentar o problema e a solução em um banco de conhecimento para futuras referências.
+
+#### **Exemplos de Manutenção Corretiva**
+
+- Corrigir erros de cadastro de animais (ex.: campos não aceitando certos caracteres).
+- Resolver falhas em agendamentos que não aparecem na agenda do dia.
+- Corrigir erros na geração de prontuários ou receitas.
+
+---
+
+### **2. Manutenção Evolutiva**
+
+Melhorias e atualizações para atender novas necessidades dos usuários ou integrar novas funcionalidades, só será efetuada caso o contrato inclua a adição de novas funcionalidades, caso contrario, será feita somente a manutenção corretiva.
+
+#### **Processo**
+
+1. **Identificação das Necessidades**:
+   - Recolher feedback dos usuários através de pesquisas e análises do uso do sistema.
+   - Identificar novas demandas do mercado (ex.: integração com dispositivos RFID avançados ou APIs de terceiros).
+2. **Planejamento**:
+   - Criar um roadmap para implementar melhorias sem interromper as operações.
+   - Priorizar funcionalidades com maior impacto para os usuários.
+3. **Desenvolvimento**:
+   - Implementar as alterações no ambiente de desenvolvimento.
+   - Integrar novas funcionalidades ao sistema existente de forma modular.
+4. **Testes**:
+   - Executar testes funcionais e de usabilidade para garantir que as novas funcionalidades atendem aos requisitos.
+5. **Treinamento e Comunicação**:
+   - Atualizar a documentação do sistema.
+   - Comunicar os usuários sobre as melhorias e, se necessário, oferecer treinamentos.
+
+#### **Exemplos de Manutenção Evolutiva**
+
+- Adicionar suporte a notificações por WhatsApp para lembretes de consulta.
+- Implementar gráficos no painel do cliente mostrando histórico de peso do animal.
+- Adicionar relatórios financeiros para o administrador do sistema.
+- Integrar uma funcionalidade de videoconferência para consultas remotas.
+
+---
+
+### **3. Manutenção Adaptativa**
+
+Ajustes no sistema para garantir sua compatibilidade com novos ambientes tecnológicos ou regulamentações.
+
+#### **Processo**
+
+1. **Monitoramento de Mudanças**:
+   - Identificar atualizações de dependências, como versões de frameworks, bibliotecas e banco de dados.
+   - Acompanhar alterações em regulamentações legais, como proteção de dados (ex.: LGPD, GDPR).
+2. **Planejamento e Testes de Compatibilidade**:
+   - Testar o sistema em novos ambientes, como sistemas operacionais atualizados, navegadores modernos e dispositivos móveis recentes.
+   - Planejar alterações necessárias para manter compatibilidade.
+3. **Implementação**:
+   - Atualizar o código ou a configuração do sistema para suportar os novos ambientes.
+   - Reconfigurar servidores ou serviços integrados, se necessário.
+4. **Validação**:
+   - Garantir que o sistema continua operando como esperado em todos os cenários previstos.
+5. **Comunicação**:
+   - Informar aos usuários sobre possíveis alterações que impactem a experiência, como suporte descontinuado para sistemas antigos.
+
+#### **Exemplos de Manutenção Adaptativa**
+
+- Ajustar o sistema para compatibilidade com uma nova versão do banco de dados MySQL/PostgreSQL.
+- Atualizar o sistema para suportar autenticação com novos métodos de dois fatores.
+- Configurar o software para rodar em um servidor Linux atualizado (ex.: Ubuntu 24.04).
+- Garantir que o sistema atenda a uma nova regulamentação exigindo maior segurança no armazenamento de dados sensíveis.
+
+---
+
+### **Ferramentas de Suporte à Manutenção**
+
+- **Monitoramento**:
+  - Ferramentas como **Prometheus**, **Grafana** e **New Relic** para identificar problemas em tempo real.
+- **Controle de Versão**:
+  - Utilização de **Git** para gerenciar alterações no código.
+- **Sistema de Tickets**:
+  - Ferramentas como **Jira**, **Trello** ou **Zendesk** para gerenciar solicitações de manutenção.
+- **Ambientes Separados**:
+  - Garantir que os ambientes de desenvolvimento, homologação e produção estejam isolados para evitar interrupções.
+
+---
+
+### **Política de Manutenção**
+
+- **Ciclos Regulares**:
+  - Planejar ciclos mensais de manutenção preventiva para realizar correções e ajustes menores.
+- **Resolução de Emergências**:
+  - Estabelecer um SLA (Acordo de Nível de Serviço) para resposta a problemas críticos (ex.: resolução em até 4 horas).
+- **Avaliações Periódicas**:
+  - Realizar auditorias trimestrais para identificar melhorias de desempenho e segurança.
 
 ## 15.3. Novas funionalidades
 
-1. Formalização do pedido;
-2. Cliente não dá palpite em beleza de tela;
-3. Decidir sob 3 critérios:
-   - a) A equipe tem tempo?
-   - b) É economicamente viável?
-   - c) É tecnologicamente viável?
+### **1. Formalização do Pedido**
+
+Todos os pedidos de novas funcionalidades devem ser formalizados e documentados para análise e aprovação.
+
+#### **Regras para Formalização**
+
+1. **Solicitação Estruturada**:
+   - O pedido deve conter:
+     - **Descrição**: O que a funcionalidade deve fazer.
+     - **Motivação**: Por que essa funcionalidade é necessária.
+     - **Impacto**: Quem será afetado (clientes, veterinários, atendentes, etc.).
+     - **Urgência**: É uma prioridade alta ou algo para melhorias futuras?
+2. **Responsável pela Solicitação**:
+   - O responsável pela funcionalidade deve ser claramente identificado (ex.: gestor, dev, ou equipe técnica).
+3. **Registro**:
+   - O pedido deve ser registrado em documento previamente acordado entre ambas as partes e após deve ser colocado um sistema de gerenciamento de tarefas, como **Jira**, **Trello** ou outro equivalente e distribuido as tarefas entre os devs.
+4. **Critérios Não-Negociáveis**:
+   - O cliente ou solicitante não deve interferir no design ou estética da interface, a menos que esteja relacionado à usabilidade.
+
+---
+
+### 2. A decisão depende de 3 critérios
+
+Antes de iniciar o desenvolvimento, o pedido será analisado sob os seguintes critérios:
+
+#### **a) A Equipe Tem Tempo?**
+
+1. **Análise de Capacidade**:
+   - Verificar a carga de trabalho atual da equipe e disponibilidade para o projeto.
+   - Utilizar ferramentas de gerenciamento de tarefas para monitorar prazos e entregas.
+2. **Priorização**:
+   - Definir se a funcionalidade é mais importante do que as tarefas em andamento.
+   - Classificar a funcionalidade como **alta**, **média** ou **baixa** prioridade.
+
+#### **b) É Economicamente Viável?**
+
+1. **Análise de Custo-Benefício**:
+   - Estimar o custo do desenvolvimento (horas de trabalho, recursos e licenças).
+   - Avaliar o impacto financeiro esperado:
+     - Geração de receita direta (ex.: serviço premium para clientes).
+     - Redução de custos (ex.: automação de tarefas manuais).
+2. **Aprovação do Orçamento**:
+   - Caso o custo seja elevado, a funcionalidade deve passar por análise e aprovação da gestão.
+
+#### **c) É Tecnologicamente Viável?**
+
+1. **Compatibilidade Técnica**:
+   - Verificar se a tecnologia atual do sistema suporta a funcionalidade.
+   - Considerar atualizações de infraestrutura ou dependências, se necessário.
+2. **Análise de Risco**:
+   - Avaliar se a funcionalidade pode comprometer o desempenho ou a segurança do sistema.
+3. **Protótipo**:
+   - Caso existam dúvidas sobre a viabilidade, criar um protótipo para validação.
+
+---
+
+### **3. Implementação**
+
+Após a aprovação, a funcionalidade será desenvolvida seguindo as melhores práticas de desenvolvimento ágil.
+
+#### **Etapas**
+
+1. **Planejamento**:
+   - Criar histórias de usuário (user stories) com requisitos claros.
+   - Dividir o trabalho em tarefas menores e alocar para a equipe.
+2. **Desenvolvimento**:
+   - Seguir padrões de código e boas práticas para garantir a manutenção futura.
+3. **Testes**:
+   - Realizar testes unitários, funcionais e de integração para garantir que a funcionalidade atenda aos requisitos sem impactar o sistema existente.
+4. **Homologação**:
+   - Disponibilizar a funcionalidade para revisão em um ambiente de teste.
+   - Coletar feedback de usuários e ajustar, se necessário.
+5. **Implantação**:
+   - Lançar a funcionalidade em produção durante uma janela de manutenção para minimizar interrupções.
+6. **Treinamento e Documentação**:
+   - Atualizar manuais e fornecer treinamento para os usuários, se necessário.
+
+---
+
+### **Exemplo de Aplicação**
+
+1. **Pedido**: Adicionar a funcionalidade de consulta ao histórico de vacinas do animal.
+   - **Motivação**: Facilitar o controle das vacinas pelos clientes e veterinários.
+   - **Impacto**: Reduz chamadas telefônicas para a clínica e melhora a experiência do cliente.
+   - **Urgência**: Alta, pois os clientes têm dificuldade em acompanhar esse histórico.
+2. **Critérios**:
+   - **Equipe tem tempo?**: Sim, após concluir as tarefas de priorização atual.
+   - **Economicamente viável?**: Sim, requer poucas horas de desenvolvimento e tem alto impacto.
+   - **Tecnologicamente viável?**: Sim, basta criar um filtro no prontuário já existente.
+3. **Resultado**:
+   - Funcionalidade desenvolvida em duas semanas.
+   - Lançamento em produção após aprovação na homologação.
+
+---
+
+### **Política de Reavaliação**
+
+- Periodicamente, todas as funcionalidades adicionadas serão revisadas para identificar possíveis melhorias ou ajustes, garantindo que continuem atendendo às necessidades do negócio.
 
 [Voltar ao Início](#sandyhonda)
 
@@ -1421,7 +1875,194 @@ manter o mesmo mas manter funcionando extamente como é
 
 ## 16.1. Usuário
 
+### **Manual de Treinamento**
+
+Este manual descreve as etapas e regras de negócio para o funcionamento da Pet+. Siga as instruções abaixo para garantir que todas as operações sejam realizadas corretamente.
+
+---
+
+#### **1. Como acessar o sistema - Usuário**
+
+- **Acesso inicial:** O cliente deve acessar o sistema por meio do site ou aplicativo da clínica.
+- **Login:** Utilize suas credenciais previamente cadastradas (e-mail e senha). Caso não tenha cadastro, o cliente pode criar uma conta.
+- **Navegação:** Após o login, o cliente terá acesso ao painel principal, onde poderá gerenciar informações pessoais e dos animais.
+
+---
+
+#### **2. Operações básicas principais**
+
+##### **Cadastro**
+
+- **Cadastro do cliente:** Inclui informações básicas como nome, telefone, endereço e e-mail.
+- **Cadastro dos animais:** O cliente deve informar dados como nome, espécie (gato, cachorro, etc), idade, peso, raça e características específicas.
+
+##### **Agendamento**
+
+- **Agendamento de consultas:** Escolha uma data e horário disponíveis no sistema para atendimento.
+- **Agendamento de serviços adicionais:** Selecione serviços como banho, tosa, fisioterapia ou hospedagem.
+
+##### **Visualização de dados**
+
+- **Fichas e prontuários:** O cliente pode consultar os históricos de atendimentos, receitas e observações feitas pelos veterinários.
+- **Acompanhamento de serviços:** Verifique o status de serviços agendados, como banho ou tosa.
+
+---
+
+#### **3. Operações avançadas**
+
+- **Marcar animais com RFID:** Todos os animais devem ser identificados com um dispositivo RFID para facilitar o controle e histórico de atendimento.
+- **Atendimento com múltiplos veterinários:** Caso o animal tenha necessidade de acompanhamento especializado, mais de um veterinário pode estar envolvido no processo.
+
+---
+
+#### **4. Backup (se estiver disponível)**
+
+- **Backup de dados:** O sistema realiza backups automáticos diários para proteger os registros do cliente e dos animais.
+- **Recuperação de dados:** Em caso de perda de informações, o cliente pode solicitar suporte para restaurar os dados.
+
+---
+
+#### **5. Como solicitar suporte**
+
+- **Contato pelo sistema:** Acesse o painel de ajuda no sistema e envie uma solicitação diretamente aos atendentes.
+- **Telefone:** Ligue para o número de suporte disponível no site.
+- **E-mail:** Envie uma descrição detalhada do problema para o endereço indicado na página de contato.
+
+---
+
+#### **6. Como documentar falhas**
+
+- **Identificação do problema:** Anote os detalhes da falha, como mensagens de erro ou comportamento inesperado.
+- **Captura de tela:** Sempre que possível, capture imagens ou grave a tela para ilustrar o problema.
+- **Envio ao suporte:** Envie as informações coletadas pelo painel de ajuda ou por e-mail.
+
+---
+
+#### **Regras de Negócio Específicas**
+
+1. **Cadastro e recepção:**
+   - O cliente deve informar as condições em que o animal chegou à clínica, bem como seus hábitos alimentares e comportamentais.
+
+2. **Fila de espera:**
+   - Se não houver veterinário disponível no momento, o atendente colocará o cliente na fila de espera.
+
+3. **Prontuários e receitas:**
+   - Cada atendimento gerará um prontuário detalhado com as observações e possíveis receitas prescritas.
+
+4. **Serviços adicionais:**
+   - Banho, tosa, pintura, fisioterapia, nutrição e outros serviços especializados podem ser agendados separadamente.
+   - A clínica oferece suporte para animais com sobrepeso, incluindo planos de alimentação e exercícios.
+
+5. **Hospedagem:**
+   - Os serviços de hotel incluem alimentação, monitoramento e atividades para o bem-estar dos animais hospedados.
+
+6. **Comunicação com profissionais:**
+   - O cliente pode acessar um canal direto de comunicação com veterinários ou outros profissionais para dúvidas ou orientações pós-consulta.
+
+7. **Relatórios e receituário:**
+   - O cliente tem acesso ao histórico completo do animal, incluindo receituários digitais disponíveis no sistema.
+
+---
+
+#### **Serviços Exclusivos**
+
+- **Cirurgias e curativos:** A clínica está preparada para atender emergências e realizar procedimentos cirúrgicos.
+- **Injeções:** Serviços de aplicação de medicamentos são realizados por profissionais qualificados.
+- **Acompanhamento nutricional:** Os clientes podem obter orientações para melhorar a saúde e nutrição de seus animais.
+- **Hotel para animais:** Um espaço seguro e confortável para estadia de curto ou longo prazo.
+
 ## 16.2. Admin
+
+### **Manual de Treinamento Lado do Administrador**
+
+Este manual descreve as etapas e responsabilidades do administrador para gerenciar o sistema da Pet+. Siga as instruções abaixo para garantir que todas as operações sejam realizadas corretamente e de forma segura.
+
+---
+
+#### **1. Como acessar o sistema**
+
+- **Acesso de administrador:** O administrador deve acessar o sistema por meio de um login exclusivo para a área administrativa, utilizando um e-mail e senha fornecidos durante o cadastro do administrador.
+- **Painel de Controle:** Após o login, o administrador terá acesso ao painel de controle do sistema, onde pode gerenciar configurações, usuários, dados e relatórios.
+
+---
+
+#### **2. Principais operações básicas**
+
+##### **Gerenciamento de usuários**
+
+- **Cadastro de clientes e veterinários:** O administrador pode adicionar, editar ou remover registros de clientes, veterinários e atendentes no sistema.
+- **Controle de agendamentos:** O administrador tem acesso completo à agenda de todos os veterinários, podendo alterar horários e gerenciar a disponibilidade de serviços.
+
+##### **Gerenciamento de animais**
+
+- **Cadastro de animais:** O administrador pode adicionar, editar ou excluir registros de animais, garantindo que todas as informações estejam corretas (nome, espécie, condição de saúde, etc.).
+- **Controle de prontuários e receitas:** O administrador pode acessar e revisar prontuários e receitas dos animais atendidos, garantindo que todos os registros estejam completos e corretamente arquivados.
+
+---
+
+#### **3. Operações especiais**
+
+- **Controle de agenda:** O administrador tem a capacidade de visualizar e ajustar a agenda dos veterinários, incluindo serviços de banho, tosa, fisioterapia e outros serviços especializados.
+- **Controle de filas de espera:** Caso necessário, o administrador pode gerenciar a fila de espera para os atendimentos, decidindo a ordem de priorização dos animais com base na situação e urgência.
+
+---
+
+#### **4. Backup do sistema e dados**
+
+##### **Realização de backup**
+
+- **Backup automático:** O sistema realiza backups automáticos diários, mas o administrador pode configurar a frequência dos backups de acordo com a necessidade da clínica.
+- **Backup manual:** O administrador pode executar backups manuais a qualquer momento, garantindo a segurança e a integridade dos dados do sistema.
+  
+##### **Gerenciamento de backups**
+
+- **Localização dos backups:** Os backups podem ser armazenados em servidores externos ou na nuvem. O administrador deve garantir que os dados estejam sendo armazenados de maneira segura e em conformidade com as políticas de segurança da informação.
+
+---
+
+#### **5. Como restaurar o sistema e dados**
+
+##### **Restauração de dados**
+
+- **Restaurar backup:** Caso o sistema apresente falhas ou perca dados, o administrador pode restaurar os dados a partir dos backups automáticos ou manuais.
+- **Restaurar versão anterior do sistema:** Caso necessário, o administrador pode restaurar a versão anterior do sistema, utilizando backups feitos antes de qualquer atualização ou modificação que tenha gerado problemas.
+
+##### **Procedimento de recuperação**
+
+- **Passo a passo para recuperação:** O administrador deve seguir o processo documentado para restaurar dados de forma eficiente e sem causar mais interrupções no serviço.
+- **Verificação de integridade:** Após a restauração, o administrador deve verificar a integridade dos dados, testando funcionalidades do sistema para garantir que tudo foi restaurado corretamente.
+
+---
+
+#### **6. Gerenciamento de contas**
+
+##### **Gestão de contas de usuários**
+
+- **Criação de novas contas:** O administrador pode criar novas contas para clientes, veterinários, atendentes e outros profissionais, atribuindo permissões e funções específicas a cada um.
+- **Modificação de permissões:** O administrador pode alterar as permissões de acesso de usuários conforme necessário, garantindo que cada pessoa tenha acesso apenas às informações e funções pertinentes ao seu cargo.
+  
+##### **Gerenciamento de senhas**
+
+- **Redefinição de senhas:** O administrador pode redefinir senhas de usuários caso eles esqueçam ou precisem de uma nova senha para acessar o sistema.
+- **Segurança das contas:** O administrador deve garantir que todos os usuários usem senhas fortes e únicas, e pode forçar a troca periódica de senhas para garantir a segurança da plataforma.
+
+---
+
+#### **7. Configurações necessárias dos servidores e clientes**
+
+##### **Configuração do servidor**
+
+- **Servidor de banco de dados:** O administrador deve garantir que o servidor de banco de dados esteja configurado corretamente, com a segurança adequada, backups regulares e acesso controlado.
+- **Servidor de aplicação:** O servidor que hospeda o sistema da clínica veterinária deve ser configurado para suportar o tráfego esperado e ter as configurações de segurança necessárias (firewall, criptografia, etc.).
+- **Atualizações do servidor:** O administrador deve garantir que o servidor e as dependências do sistema sejam atualizados periodicamente para corrigir vulnerabilidades e melhorar o desempenho.
+
+##### **Configuração do cliente**
+
+- **Instalação do sistema nos clientes:** O administrador deve garantir que todos os dispositivos clientes (computadores, tablets, smartphones) estejam configurados corretamente para acessar o sistema.
+- **Configuração de rede:** A rede de comunicação entre os dispositivos clientes e servidores deve ser configurada para garantir um tráfego de dados eficiente e seguro, incluindo o uso de VPN ou outras medidas de segurança, se necessário.
+- **Verificação de compatibilidade:** O administrador deve garantir que todos os dispositivos clientes sejam compatíveis com o sistema (sistemas operacionais, navegadores, aplicativos, etc.).
+
+---
 
 [Voltar ao Início](#sandyhonda)
 
